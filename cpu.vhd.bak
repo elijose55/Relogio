@@ -1,0 +1,105 @@
+-- Design de Computadores
+-- developed by Larissa Amaral
+-- file: cpu.vhd
+-- date: 25/09/2019
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity cpu is
+    generic (
+		larguraBarramentoEnderecos	: natural := 8;
+		larguraBarramentoDados		: natural := 8
+    );
+	port
+    (
+        clk			            : IN  STD_LOGIC;
+        barramentoDadosEntrada	: IN STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+        barramentoEnderecos		: OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
+	    barramentoDadosSaida	: OUT STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+        readEnable		        : OUT STD_LOGIC;
+        writeEnable		        : OUT STD_LOGIC
+    );
+end entity;
+
+architecture estrutural of relogio is
+
+	-- Declaração de sinais auxiliares
+	signal entradaA_MUX, entradaA_MUX, saida_MUX, entrada_somador, saida_somador : STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+   signal seletor_MUX : STD_LOGIC;
+	signal reset_pc : STD_LOGIC;
+	
+    -- ...
+
+begin
+
+    -- Exemplos de instanciação de componentes
+
+    -- Instanciação de Banco de Registradores
+    BR : entity work.bancoRegistradores 
+    generic map (
+        larguraDados    => larguraBarramentoDados
+    );
+	port map
+	(
+        clk	                => clk,
+		enderecoA			=> enderecoA,
+        dadoEscritaA	    => dadoEscritaA,
+        escreveA	        => escreveA,
+        saidaA   		    => saidaA
+    );
+
+    -- Instanciação do Program Counter
+    PC : entity work.PC 
+    -- generic map (
+    -- );
+	port map
+	(
+        clk	        => clk,
+        reset       => reset_pc,
+		DIN			=> entrada_pc,
+        DOUT	    => saida_pc
+    );
+
+	-- Instanciação de MUX
+    MUXPC : entity work.MuxPC
+    generic map (
+        larguraDados    => larguraBarramentoDados
+    );
+	port map
+	(
+		inSomadorConstante			=> entradaA_MUXPC,
+      inJump	        => entradaB_MUXPC,
+        sel   		    => seletor_MUXPC,
+		outMux	            => saida_MUXPC
+    );
+    
+    -- ...
+
+    -- Instanciação de Somador com Constante
+    SOMADOR1 : entity work.somadorConstante 
+    generic map (
+        larguraBarramentoDados    => larguraBarramentoDados;
+    );
+	port map
+	(
+		inSomador			=> entrada_somador,
+		outSomador	        => saida_somador
+    );
+	 
+	 
+	 -- Instanciacao da ULA
+	 ULA : entity work.ULA
+	generic map (
+        larguraBarramentoDados    => larguraBarramentoDados;
+    );
+	port map
+	(
+		inSomador			=> entrada_somador,
+		outSomador	        => saida_somador
+    );
+    
+	-- Completar com a instanciação de demais 
+	-- componentes necessários
+
+end architecture;

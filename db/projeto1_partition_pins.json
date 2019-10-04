@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "barramentoEnderecos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEnderecos[7]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoDadosSaida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_instruction[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
