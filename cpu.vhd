@@ -46,7 +46,7 @@ begin
     -- Instanciacao da Unidade de Controle
 	 UC : entity work.UC
 	 port map(
-	 opcode => ROM_instruction(2 downto 0),
+	 opcode => ROM_instruction(15 downto 13),
 	 flagEqual => flagEqual,
 	 muxJMP => muxJMP, -- entra no mux do pc
 	 wrReg => wrReg, -- Seletor da escrita no banco de REG
@@ -65,7 +65,7 @@ begin
 	port map
 	(
         clk	                => clk,
-		enderecoA			=> ROM_instruction(7 downto 3),
+		enderecoA			=> ROM_instruction(12 downto 8),
         dadoEscritaA	    => dadoEscritaA,
         escreveA	        => wrReg,
         saidaA   		    => bancoReg_out
@@ -90,7 +90,7 @@ begin
 	port map
 	(
 		inSomadorConstante			=> MUXPC_inA,
-      inJump	        => ROM_instruction(15 downto 8),
+      inJump	        => ROM_instruction(7 downto 0),
         sel   		    => muxJMP,
 		outMux	            => MUXPC_out
     );
@@ -102,7 +102,7 @@ begin
     )
 	port map
 	(
-		inA			=> ROM_instruction(15 downto 8),
+		inA			=> ROM_instruction(7 downto 0),
 		inB => ULA_out,
       inC	        => barramentoDadosEntrada,
         sel   		    => muxMAIN,
@@ -131,13 +131,13 @@ begin
 	(
 		sel			=> opULA,
 		inA	        => bancoReg_out,
-		inB => ROM_instruction(15 downto 8),
+		inB => ROM_instruction(7 downto 0),
 		outULA => ULA_out,
 		flagEqual => flagEqual
     );
 	 
 	 barramentoDadosSaida <= bancoReg_out;
-	 barramentoEnderecos <= ROM_instruction(15 downto 8);
+	 barramentoEnderecos <= ROM_instruction(7 downto 0);
 	 readEnable <= RD;
 	 writeEnable <= WR;
     
