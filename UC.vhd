@@ -28,25 +28,28 @@ constant JMP : std_logic_vector(2 downto 0) := "111";
 begin
 
 	muxJMP <= '1' when opcode = JMP else
+				 '1' when opcode = JNE else
 				'0';
 				
 	wrReg <= '1' when opcode=LOAD else
+				'1' when opcode = ADD else
+				'1' when opcode = MOV else
 					 '0';
 	
-	opUla <= "000" when opcode=ADD OR opcode=ADD else
-				  --"001" when opcode= else
-				  --"011" when opcode= OR opcode= else
-				  --"010" when opcode= else
+	opUla <= "000" when opcode = ADD  else
+				  "001" when opcode = CMP else
 				  "111";
 		
 			  
-	RD <= '1' when opcode=MOV else
+	RD <= '1' when opcode = LOAD else
 					  '0';
 	
-	WR <= '1' when opcode=LOAD else
+	WR <= '1' when opcode = STORE else
 						'0';
 						
-	muxMain <= "00" when opcode=ADD else
+	muxMain <= "10" when opcode = LOAD else
+					"01" when opcode = ADD else
+					"00" when opcode = MOV else
 					 "11";
 					 
 end architecture;

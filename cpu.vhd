@@ -14,7 +14,6 @@ entity cpu is
 	port
     (
         clk			            : IN  STD_LOGIC;
-		  ROM_instruction : IN STD_LOGIC_VECTOR(15 downto 0);
         barramentoDadosEntrada	: IN STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
         barramentoEnderecos		: OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
 	    barramentoDadosSaida	: OUT STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
@@ -26,14 +25,23 @@ end entity;
 architecture estrutural of cpu is
 
 	-- Declaração de sinais auxiliares
+	signal ROM_instruction : STD_LOGIC_VECTOR(15 downto 0);
 	signal bancoReg_out, ULA_inB, ULA_out, entrada_somador,dadoEscritaA, saida_somador, PC_out,MUXPC_out,MUXPC_inA : STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
-   signal muxJMP,wrReg, reset_pc, flagEqual,WR,RD : STD_LOGIC;
+   signal muxJMP,wrReg, flagEqual,WR,RD : STD_LOGIC;
 	signal opULA : STD_LOGIC_VECTOR(2 downto 0);
 	signal muxMAIN : STD_LOGIC_VECTOR(1 downto 0);
 	
     -- ...
 
 begin
+
+	    -- Instanciacao da ROM
+	 ROM : entity work.romMif
+	 port map(
+	 Dado => ROM_instruction,
+	 Endereco => PC_out
+	 );
+	 
 
     -- Instanciacao da Unidade de Controle
 	 UC : entity work.UC
@@ -131,7 +139,7 @@ begin
 	 barramentoDadosSaida <= bancoReg_out;
 	 barramentoEnderecos <= ROM_instruction(15 downto 8);
 	 readEnable <= RD;
-	 writeEnable <= WR
+	 writeEnable <= WR;
     
 	-- Completar com a instanciação de demais 
 	-- componentes necessários
