@@ -1,3 +1,8 @@
+'''
+PSEUDOCODIGO DO RELOGIO EM PYTHON
+Eli Jose e Pedro Azambuja
+Design de Computadores - Eng Computacao - Insper
+'''
 import time
 us = 0;
 ds = 0;
