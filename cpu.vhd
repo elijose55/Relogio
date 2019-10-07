@@ -13,6 +13,9 @@ entity cpu is
     );
 	port
     (
+	 --===========================TESTE
+	 LEDG : out std_logic_vector(6 downto 0);
+	 --#################################
         clk			            : IN  STD_LOGIC;
         barramentoDadosEntrada	: IN STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
         barramentoEnderecos		: OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
@@ -27,7 +30,7 @@ architecture estrutural of cpu is
 	-- Declaração de sinais auxiliares
 	signal ROM_instruction : STD_LOGIC_VECTOR(15 downto 0);
 	signal bancoReg_out, ULA_inB, ULA_out, entrada_somador,dadoEscritaA, saida_somador, PC_out,MUXPC_out,MUXPC_inA : STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
-   signal muxJMP,wrReg, flagEqual,WR,RD : STD_LOGIC;
+   signal muxJMP,wrReg, flagEqual,registerEqual,WR,RD : STD_LOGIC;
 	signal opULA : STD_LOGIC_VECTOR(2 downto 0);
 	signal muxMAIN : STD_LOGIC_VECTOR(1 downto 0);
 	
@@ -47,7 +50,7 @@ begin
 	 UC : entity work.UC
 	 port map(
 	 opcode => ROM_instruction(15 downto 13),
-	 flagEqual => flagEqual,
+	 flagEqual => registerEqual,
 	 muxJMP => muxJMP, -- entra no mux do pc
 	 wrReg => wrReg, -- Seletor da escrita no banco de REG
 	 muxMain => muxMAIN,
@@ -82,6 +85,17 @@ begin
         output	    => PC_out
     );
 
+    -- Instanciação do Program Counter
+    registerFlag : entity work.registerFlag 
+    -- generic map (
+    -- );
+	port map
+	(
+        clk	        => clk,
+		input			=> flagEqual,
+        output	    => registerEqual
+    );
+	 
 	-- Instanciação de MUX do PC
     MUXPC : entity work.MuxPC
     generic map (
@@ -141,7 +155,10 @@ begin
 	 readEnable <= RD;
 	 writeEnable <= WR;
     
+	 --===TESTE
+	 LEDG(6 downto 0) <= PC_out(6 downto 0);
+	 --##############
 	-- Completar com a instanciação de demais 
-	-- componentes necessários
+	-- componentes necessários;
 
 end architecture;

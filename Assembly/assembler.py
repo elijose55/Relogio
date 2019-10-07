@@ -70,11 +70,11 @@ mem_address_dict = {
 with open('assembly_relogio.asm', 'r') as infile:
 
 	label_list, lines = get_jump_labels(infile)
-	fin = open("binario.mif", "wt")
+	fin = open("../binario.mif", "wt")
 	fin.write("WIDTH=16;\n")
-	fin.write("DEPTH=" + str(len(lines)) + ";\n")
+	fin.write("DEPTH=256;\n")
 	fin.write("ADDRESS_RADIX=DEC;\n")
-	fin.write("DATA_RADIX=BIN \n")
+	fin.write("DATA_RADIX=BIN; \n")
 	fin.write("CONTENT BEGIN\n")
 
 	
@@ -89,20 +89,3 @@ with open('assembly_relogio.asm', 'r') as infile:
 
 	print(label_list)
 
-
-
-
-
-
-'''
-	fin.close()
-
-	fin = open("binario.txt", "wt")
-	fin.write("WIDTH=8;")
-	fin.write("DEPTH=256;")
-	fin.write("ADDRESS_RADIX=DEC;")
-	fin.write("DATA_RADIX=BIN \b")
-	fin.write("CONTENT BEGIN")
-	fin.write(data)
-	fin.close()
-'''

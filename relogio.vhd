@@ -18,7 +18,9 @@ entity relogio is
 		-- CHAVES
         SW : IN STD_LOGIC_VECTOR(quantidadeChaves-1 downto 0);
 		-- DISPLAYS 7 SEG
-		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
+		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0) := "0000000";
+		LEDG : out std_logic_vector(7 downto 0);
+		LEDR : out std_logic_vector(17 downto 0) := "000000000000000000"
     );
 end entity;
 
@@ -42,13 +44,36 @@ architecture estrutural of relogio is
 	signal saidaDivisorGenerico		: STD_LOGIC_VECTOR(7 downto 0);
 	signal switches : std_logic_vector(1 downto 0);
 
+	signal tick : std_logic;
+    signal contador : integer range 0 to 50000001 := 0;
+	signal divisor : natural := 15000000;
+	
 begin
+
+
+	  process(CLOCK_50)
+    begin
+        if rising_edge(CLOCK_50) then
+					if contador >= divisor then
+						contador <= 0;
+						 tick <= not tick;
+						 
+					else
+						 contador <= contador + 1;
+			
+			end if;
+		  end if;
+			end process;
+
+
 
 	-- Instanciação da CPU
 	CPU : entity work.cpu 
 	port map
 	(
-		clk						=> CLOCK_50,
+	
+	LEDG => LEDG(6 downto 0),
+		clk						=> tick,
         barramentoDadosEntrada	=> saidaDivisorGenerico,
         barramentoEnderecos		=> barramentoEnderecos,
 		barramentoDadosSaida	=> barramentoDadosSaida,
@@ -94,7 +119,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_US,
 		saida7seg	=> HEX0
 	);
@@ -103,7 +128,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_DS,
 		saida7seg	=> HEX1
 	);
@@ -111,7 +136,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_UM,
 		saida7seg	=> HEX2
 	);
@@ -119,7 +144,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_DM,
 		saida7seg	=> HEX3
 	);
@@ -127,7 +152,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_UH,
 		saida7seg	=> HEX4
 	);
@@ -135,7 +160,7 @@ begin
 	port map
 	(
 		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosEntrada(3 downto 0),
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
 		habilita	=> LCD_DH,
 		saida7seg	=> HEX5
 	);
@@ -153,7 +178,7 @@ begin
 	);
 	
 	
-
+LEDG(7) <= saidaDivisorGenerico(0);
 
 	-- componentes necessários
 

@@ -21,18 +21,14 @@ end entity;
 architecture arc_ula of ULA is
 	signal equal : std_logic;
 begin
-	equal <= '1' when (to_integer(unsigned(inA AND inB)) > 0) else '0'; -- Compara se inA = inB
+	
+		outULA <= std_logic_vector(unsigned(inA) + unsigned(inB)) when sel = "000" else -- soma A + B
+					inA when sel = "011" else -- passa A
+					inB when sel = "010" else -- passa B
+					"00000000";  -- nao faz nada
 
-	OUT_ULA : with sel select 
 	
-		outULA <= std_logic_vector(unsigned(inA) + unsigned(inB)) when "000", -- soma A + B
-					inA when "011", -- passa A
-					inB when "010", -- passa B
-					(others => '0') when others;  -- nao faz nada
-					
-	OUT_EQUAL : with sel select
-	
-		flagEqual <= equal when "001", --seta flag quand A = B
-		'0' when others;
+		flagEqual <= '1' when inA=inB else --seta flag quand A = B
+		'0';
 		
 end arc_ula;

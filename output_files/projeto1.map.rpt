@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto1
-Fri Oct 04 06:51:07 2019
+Mon Oct 07 20:05:14 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,17 +14,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |cpu
- 10. Parameter Settings for User Entity Instance: bancoRegistradores:BR
- 11. Parameter Settings for User Entity Instance: PC:PC
- 12. Parameter Settings for User Entity Instance: muxPC:MUXPC
- 13. Parameter Settings for User Entity Instance: muxBancoReg:MUXBancoReg
- 14. Parameter Settings for User Entity Instance: somadorConstante:SOMADOR
- 15. Parameter Settings for User Entity Instance: ULA:ULA
- 16. Port Connectivity Checks: "UC:UC"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
+ 11. Parameter Settings for User Entity Instance: cpu:CPU
+ 12. Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM
+ 13. Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR
+ 14. Parameter Settings for User Entity Instance: cpu:CPU|PC:PC
+ 15. Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC
+ 16. Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg
+ 17. Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR
+ 18. Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA
+ 19. Parameter Settings for User Entity Instance: decoder:DE
+ 20. Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO
+ 21. Parameter Settings for User Entity Instance: switches:CHAVES
+ 22. Port Connectivity Checks: "cpu:CPU"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +56,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 04 06:51:07 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 07 20:05:14 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projeto1                                    ;
-; Top-level Entity Name              ; cpu                                         ;
+; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 475                                         ;
-;     Total combinational functions  ; 227                                         ;
-;     Dedicated logic registers      ; 256                                         ;
-; Total registers                    ; 256                                         ;
-; Total pins                         ; 43                                          ;
+; Total logic elements               ; 662                                         ;
+;     Total combinational functions  ; 379                                         ;
+;     Dedicated logic registers      ; 362                                         ;
+; Total registers                    ; 362                                         ;
+; Total pins                         ; 85                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -73,8 +79,9 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; cpu                ; projeto1           ;
+; Top-level entity name                                            ; relogio            ; projeto1           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -159,74 +166,98 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/PC.vhd                 ;         ;
-; somadorConstante.vhd             ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/somadorConstante.vhd   ;         ;
-; MuxPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/MuxPC.vhd              ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/ULA.vhd                ;         ;
-; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/UC.vhd                 ;         ;
-; MUXBancoReg.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/MUXBancoReg.vhd        ;         ;
-; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd                ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Projeto1/bancoRegistradores.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd                 ;         ;
+; somadorConstante.vhd             ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd   ;         ;
+; MuxPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd              ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd                ;         ;
+; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd                 ;         ;
+; MUXBancoReg.vhd                  ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd        ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd                ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd                ;         ;
+; switches.vhd                     ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd           ;         ;
+; baseTempo.vhd                    ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd          ;         ;
+; relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd            ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd            ;         ;
+; display7Seg.vhd                  ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd        ;         ;
+; registerFlag.vhd                 ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd       ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 475       ;
-;                                             ;           ;
-; Total combinational functions               ; 227       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 195       ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 32        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 227       ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 256       ;
-;     -- Dedicated logic registers            ; 256       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 43        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 256       ;
-; Total fan-out                               ; 1671      ;
-; Average fan-out                             ; 2.94      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 662   ;
+;                                             ;       ;
+; Total combinational functions               ; 379   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 246   ;
+;     -- 3 input functions                    ; 61    ;
+;     -- <=2 input functions                  ; 72    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 314   ;
+;     -- arithmetic mode                      ; 65    ;
+;                                             ;       ;
+; Total registers                             ; 362   ;
+;     -- Dedicated logic registers            ; 362   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 85    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; tick  ;
+; Maximum fan-out                             ; 266   ;
+; Total fan-out                               ; 2559  ;
+; Average fan-out                             ; 2.81  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name        ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------------+--------------+
-; |cpu                         ; 227 (0)             ; 256 (0)                   ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |cpu                         ; cpu                ; work         ;
-;    |bancoRegistradores:BR|   ; 219 (219)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|bancoRegistradores:BR   ; bancoRegistradores ; work         ;
-;    |muxBancoReg:MUXBancoReg| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|muxBancoReg:MUXBancoReg ; muxBancoReg        ; work         ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
+; |relogio                          ; 379 (36)            ; 362 (27)                  ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |relogio                                   ; relogio            ; work         ;
+;    |baseTempo:BASE_TEMPO|         ; 35 (35)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|baseTempo:BASE_TEMPO              ; baseTempo          ; work         ;
+;    |cpu:CPU|                      ; 286 (0)             ; 265 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                           ; cpu                ; work         ;
+;       |PC:PC|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|PC:PC                     ; PC                 ; work         ;
+;       |UC:UC|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|UC:UC                     ; UC                 ; work         ;
+;       |ULA:ULA|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULA:ULA                   ; ULA                ; work         ;
+;       |bancoRegistradores:BR|     ; 220 (220)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|bancoRegistradores:BR     ; bancoRegistradores ; work         ;
+;       |muxBancoReg:MUXBancoReg|   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg   ; muxBancoReg        ; work         ;
+;       |registerFlag:registerFlag| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registerFlag:registerFlag ; registerFlag       ; work         ;
+;       |romMif:ROM|                ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|romMif:ROM                ; romMif             ; work         ;
+;    |decoder:DE|                   ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                        ; decoder            ; work         ;
+;    |display7Seg:DISPLAY0|         ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY0              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY1|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY1              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY2|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY2              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY3|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY3              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY4|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY4              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY5|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY5              ; display7Seg        ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,96 +266,161 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 256   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 362   ;
+; Number of registers using Synchronous Clear  ; 53    ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Clock Enable       ; 325   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |cpu ;
-+----------------------------+-------+--------------------------------+
-; Parameter Name             ; Value ; Type                           ;
-+----------------------------+-------+--------------------------------+
-; larguraBarramentoEnderecos ; 8     ; Signed Integer                 ;
-; larguraBarramentoDados     ; 8     ; Signed Integer                 ;
-+----------------------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |relogio|baseTempo:BASE_TEMPO|contador[11]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|UC:UC|muxMain[0]             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg|Mux4 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: bancoRegistradores:BR ;
-+------------------------+-------+-----------------------------------+
-; Parameter Name         ; Value ; Type                              ;
-+------------------------+-------+-----------------------------------+
-; largurabarramentodados ; 8     ; Signed Integer                    ;
-; larguraendbancoregs    ; 5     ; Signed Integer                    ;
-+------------------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------+
-; Parameter Settings for User Entity Instance: PC:PC ;
-+------------------------+-------+-------------------+
-; Parameter Name         ; Value ; Type              ;
-+------------------------+-------+-------------------+
-; largurabarramentodados ; 8     ; Signed Integer    ;
-+------------------------+-------+-------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxPC:MUXPC ;
-+------------------------+-------+-------------------------+
-; Parameter Name         ; Value ; Type                    ;
-+------------------------+-------+-------------------------+
-; largurabarramentodados ; 8     ; Signed Integer          ;
-+------------------------+-------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxBancoReg:MUXBancoReg ;
-+------------------------+-------+-------------------------------------+
-; Parameter Name         ; Value ; Type                                ;
-+------------------------+-------+-------------------------------------+
-; largurabarramentodados ; 8     ; Signed Integer                      ;
-+------------------------+-------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: somadorConstante:SOMADOR ;
-+------------------------+-------+--------------------------------------+
-; Parameter Name         ; Value ; Type                                 ;
-+------------------------+-------+--------------------------------------+
-; largurabarramentodados ; 8     ; Signed Integer                       ;
-+------------------------+-------+--------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |relogio ;
++----------------------------+-------+------------------------------------+
+; Parameter Name             ; Value ; Type                               ;
++----------------------------+-------+------------------------------------+
+; larguraBarramentoEnderecos ; 8     ; Signed Integer                     ;
+; larguraBarramentoDados     ; 8     ; Signed Integer                     ;
+; quantidadeChaves           ; 2     ; Signed Integer                     ;
+; quantidadeDisplays         ; 8     ; Signed Integer                     ;
++----------------------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA:ULA ;
-+------------------------+-------+---------------------+
-; Parameter Name         ; Value ; Type                ;
-+------------------------+-------+---------------------+
-; largurabarramentodados ; 8     ; Signed Integer      ;
-+------------------------+-------+---------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU ;
++----------------------------+-------+-----------------+
+; Parameter Name             ; Value ; Type            ;
++----------------------------+-------+-----------------+
+; largurabarramentoenderecos ; 8     ; Signed Integer  ;
+; largurabarramentodados     ; 8     ; Signed Integer  ;
++----------------------------+-------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UC:UC"                                                                              ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; rd   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wr   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; datawidth      ; 16    ; Signed Integer                         ;
+; addrwidth      ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR ;
++------------------------+-------+-------------------------------------------+
+; Parameter Name         ; Value ; Type                                      ;
++------------------------+-------+-------------------------------------------+
+; largurabarramentodados ; 8     ; Signed Integer                            ;
+; larguraendbancoregs    ; 5     ; Signed Integer                            ;
++------------------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|PC:PC ;
++------------------------+-------+---------------------------+
+; Parameter Name         ; Value ; Type                      ;
++------------------------+-------+---------------------------+
+; largurabarramentodados ; 8     ; Signed Integer            ;
++------------------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC ;
++------------------------+-------+---------------------------------+
+; Parameter Name         ; Value ; Type                            ;
++------------------------+-------+---------------------------------+
+; largurabarramentodados ; 8     ; Signed Integer                  ;
++------------------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg ;
++------------------------+-------+---------------------------------------------+
+; Parameter Name         ; Value ; Type                                        ;
++------------------------+-------+---------------------------------------------+
+; largurabarramentodados ; 8     ; Signed Integer                              ;
++------------------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR ;
++------------------------+-------+----------------------------------------------+
+; Parameter Name         ; Value ; Type                                         ;
++------------------------+-------+----------------------------------------------+
+; largurabarramentodados ; 8     ; Signed Integer                               ;
++------------------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA ;
++------------------------+-------+-----------------------------+
+; Parameter Name         ; Value ; Type                        ;
++------------------------+-------+-----------------------------+
+; largurabarramentodados ; 8     ; Signed Integer              ;
++------------------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decoder:DE ;
++-------------------+-------+-----------------------------+
+; Parameter Name    ; Value ; Type                        ;
++-------------------+-------+-----------------------------+
+; larguraenddecoder ; 8     ; Signed Integer              ;
++-------------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO ;
++------------------------+----------+-------------------------------+
+; Parameter Name         ; Value    ; Type                          ;
++------------------------+----------+-------------------------------+
+; largurabarramentodados ; 8        ; Signed Integer                ;
+; divisor_normal         ; 50000000 ; Signed Integer                ;
++------------------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switches:CHAVES ;
++------------------+-------+-----------------------------------+
+; Parameter Name   ; Value ; Type                              ;
++------------------+-------+-----------------------------------+
+; quantidadechaves ; 2     ; Signed Integer                    ;
++------------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:CPU"                                                                                                  ;
++----------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                       ; Type   ; Severity ; Details                                                                             ;
++----------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; barramentodadossaida[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -332,17 +428,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 43                          ;
-; cycloneiii_ff         ; 256                         ;
-;     ENA               ; 256                         ;
-; cycloneiii_lcell_comb ; 228                         ;
-;     normal            ; 228                         ;
+; boundary_port         ; 85                          ;
+; cycloneiii_ff         ; 362                         ;
+;     ENA               ; 298                         ;
+;     ENA SCLR          ; 27                          ;
+;     SCLR              ; 26                          ;
+;     SLD               ; 8                           ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 379                         ;
+;     arith             ; 65                          ;
+;         2 data inputs ; 58                          ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 314                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 32                          ;
-;         4 data inputs ; 195                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 246                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.88                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -351,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -361,71 +466,126 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 04 06:50:41 2019
+    Info: Processing started: Mon Oct 07 20:04:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto1 -c projeto1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-arch File: C:/Users/Pedro/Documents/Design/Projeto1/PC.vhd Line: 17
-    Info (12023): Found entity 1: PC File: C:/Users/Pedro/Documents/Design/Projeto1/PC.vhd Line: 5
+    Info (12022): Found design unit 1: PC-arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd Line: 17
+    Info (12023): Found entity 1: PC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somadorconstante.vhd
-    Info (12022): Found design unit 1: somadorConstante-arc_somadorConstante File: C:/Users/Pedro/Documents/Design/Projeto1/somadorConstante.vhd Line: 18
-    Info (12023): Found entity 1: somadorConstante File: C:/Users/Pedro/Documents/Design/Projeto1/somadorConstante.vhd Line: 6
+    Info (12022): Found design unit 1: somadorConstante-arc_somadorConstante File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd Line: 18
+    Info (12023): Found entity 1: somadorConstante File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file muxpc.vhd
-    Info (12022): Found design unit 1: muxPC-comportamentoMuxPc File: C:/Users/Pedro/Documents/Design/Projeto1/MuxPC.vhd Line: 20
-    Info (12023): Found entity 1: muxPC File: C:/Users/Pedro/Documents/Design/Projeto1/MuxPC.vhd Line: 6
+    Info (12022): Found design unit 1: muxPC-comportamentoMuxPc File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd Line: 20
+    Info (12023): Found entity 1: muxPC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-arc_ula File: C:/Users/Pedro/Documents/Design/Projeto1/ULA.vhd Line: 21
-    Info (12023): Found entity 1: ULA File: C:/Users/Pedro/Documents/Design/Projeto1/ULA.vhd Line: 6
+    Info (12022): Found design unit 1: ULA-arc_ula File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd Line: 21
+    Info (12023): Found entity 1: ULA File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: UC-UCarch File: C:/Users/Pedro/Documents/Design/Projeto1/UC.vhd Line: 18
-    Info (12023): Found entity 1: UC File: C:/Users/Pedro/Documents/Design/Projeto1/UC.vhd Line: 4
+    Info (12022): Found design unit 1: UC-UCarch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd Line: 18
+    Info (12023): Found entity 1: UC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxbancoreg.vhd
-    Info (12022): Found design unit 1: muxBancoReg-comportamentoMuxBancoReg File: C:/Users/Pedro/Documents/Design/Projeto1/MUXBancoReg.vhd Line: 21
-    Info (12023): Found entity 1: muxBancoReg File: C:/Users/Pedro/Documents/Design/Projeto1/MUXBancoReg.vhd Line: 6
+    Info (12022): Found design unit 1: muxBancoReg-comportamentoMuxBancoReg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd Line: 21
+    Info (12023): Found entity 1: muxBancoReg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-estrutural File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 26
-    Info (12023): Found entity 1: cpu File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 9
+    Info (12022): Found design unit 1: cpu-estrutural File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 28
+    Info (12023): Found entity 1: cpu File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Pedro/Documents/Design/Projeto1/bancoRegistradores.vhd Line: 28
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Pedro/Documents/Design/Projeto1/bancoRegistradores.vhd Line: 7
-Info (12127): Elaborating entity "cpu" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at cpu.vhd(21): used implicit default value for signal "readEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 21
-Warning (10541): VHDL Signal Declaration warning at cpu.vhd(22): used implicit default value for signal "writeEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 22
-Warning (10036): Verilog HDL or VHDL warning at cpu.vhd(30): object "WR" assigned a value but never read File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 30
-Warning (10036): Verilog HDL or VHDL warning at cpu.vhd(30): object "RD" assigned a value but never read File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 30
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 39
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:BR" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 53
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 67
-Info (12128): Elaborating entity "muxPC" for hierarchy "muxPC:MUXPC" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 78
-Info (12128): Elaborating entity "muxBancoReg" for hierarchy "muxBancoReg:MUXBancoReg" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 91
-Info (12128): Elaborating entity "somadorConstante" for hierarchy "somadorConstante:SOMADOR" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 106
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 118
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 28
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 19
+    Info (12023): Found entity 1: romMif File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file switches.vhd
+    Info (12022): Found design unit 1: switches-swArch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd Line: 21
+    Info (12023): Found entity 1: switches File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file basetempo.vhd
+    Info (12022): Found design unit 1: baseTempo-arch_baseTempo File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 19
+    Info (12023): Found entity 1: baseTempo File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
+    Info (12022): Found design unit 1: relogio-estrutural File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 27
+    Info (12023): Found entity 1: relogio File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: decoder-Decoder_arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd Line: 28
+    Info (12023): Found entity 1: decoder File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file display7seg.vhd
+    Info (12022): Found design unit 1: display7Seg-comportamento File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd Line: 19
+    Info (12023): Found entity 1: display7Seg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registerflag.vhd
+    Info (12022): Found design unit 1: registerFlag-arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd Line: 14
+    Info (12023): Found entity 1: registerFlag File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd Line: 5
+Info (12127): Elaborating entity "relogio" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX6" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX7" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(23): used explicit default value for signal "LEDR" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(49): used explicit default value for signal "divisor" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 49
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 71
+Info (12128): Elaborating entity "romMif" for hierarchy "cpu:CPU|romMif:ROM" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 42
+Warning (10541): VHDL Signal Declaration warning at ROM.vhd(22): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 22
+Info (12128): Elaborating entity "UC" for hierarchy "cpu:CPU|UC:UC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 50
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "cpu:CPU|bancoRegistradores:BR" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 64
+Info (12128): Elaborating entity "PC" for hierarchy "cpu:CPU|PC:PC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 78
+Info (12128): Elaborating entity "registerFlag" for hierarchy "cpu:CPU|registerFlag:registerFlag" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 89
+Info (12128): Elaborating entity "muxPC" for hierarchy "cpu:CPU|muxPC:MUXPC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 100
+Info (12128): Elaborating entity "muxBancoReg" for hierarchy "cpu:CPU|muxBancoReg:MUXBancoReg" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 113
+Info (12128): Elaborating entity "somadorConstante" for hierarchy "cpu:CPU|somadorConstante:SOMADOR" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 128
+Info (12128): Elaborating entity "ULA" for hierarchy "cpu:CPU|ULA:ULA" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 140
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:DE" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 87
+Info (12128): Elaborating entity "baseTempo" for hierarchy "baseTempo:BASE_TEMPO" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 107
+Warning (10540): VHDL Signal Declaration warning at baseTempo.vhd(23): used explicit default value for signal "divisor" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 23
+Info (12128): Elaborating entity "display7Seg" for hierarchy "display7Seg:DISPLAY0" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 118
+Info (12128): Elaborating entity "switches" for hierarchy "switches:CHAVES" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 170
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "bancoRegistradores:BR|registrador" is uninferred due to asynchronous read logic File: C:/Users/Pedro/Documents/Design/Projeto1/bancoRegistradores.vhd Line: 34
+    Info (276007): RAM logic "cpu:CPU|bancoRegistradores:BR|registrador" is uninferred due to asynchronous read logic File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 34
+Warning (113028): 236 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
+    Warning (113027): Addresses ranging from 20 to 255 are not initialized File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "readEnable" is stuck at GND File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 21
-    Warning (13410): Pin "writeEnable" is stuck at GND File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 22
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[0]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[1]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[2]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[3]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[4]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[5]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[6]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-    Warning (15610): No output dependent on input pin "barramentoDadosEntrada[7]" File: C:/Users/Pedro/Documents/Design/Projeto1/cpu.vhd Line: 18
-Info (21057): Implemented 526 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 483 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Fri Oct 04 06:51:07 2019
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:49
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 19
+Info (21057): Implemented 762 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 82 output pins
+    Info (21061): Implemented 677 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Mon Oct 07 20:05:14 2019
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:01:07
 
 

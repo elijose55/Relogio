@@ -27,8 +27,7 @@ constant JMP : std_logic_vector(2 downto 0) := "111"; -- Pulo incondicional para
 	
 begin
 
-	muxJMP <= '1' when opcode = JMP else
-				 '1' when opcode = JNE else
+	muxJMP <= '1' when opcode = JMP OR (opcode = JNE and flagEqual = '0') else
 				'0';
 				
 	wrReg <= '1' when opcode=LOAD else
