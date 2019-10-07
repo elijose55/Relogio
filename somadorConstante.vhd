@@ -17,6 +17,7 @@ end entity;
 
 architecture arc_somadorConstante of somadorConstante is
 begin
+	-- Incrementa um no valor de entrada
 
 	outSomador <= inSomador + 1;
 

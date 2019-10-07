@@ -22,7 +22,7 @@ begin
 
 	with sel select 
 		outMux <= inSomadorConstante when '0',
-				  inJump when '1';
+				  inJump when '1'; -- Realiza a instrucao de pulo quando o seletor possuir valor 1
 
 
 end architecture;

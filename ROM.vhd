@@ -22,7 +22,7 @@ type memory_t is array (0 to 2**addrWidth -1) of std_logic_vector (dataWidth-1 d
 signal content: memory_t;
 attribute ram_init_file : string;
 attribute ram_init_file of content:
-signal is "binario.mif";
+signal is "binario.mif"; -- Arquivo que contem o set de intrucoes
 
 begin
    Dado <= content(to_integer(unsigned(Endereco)));

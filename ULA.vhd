@@ -25,14 +25,14 @@ begin
 
 	OUT_ULA : with sel select 
 	
-		outULA <= std_logic_vector(unsigned(inA) + unsigned(inB)) when "000",
-					inA when "011",
-					inB when "010",
-					(others => '0') when others;
+		outULA <= std_logic_vector(unsigned(inA) + unsigned(inB)) when "000", -- soma A + B
+					inA when "011", -- passa A
+					inB when "010", -- passa B
+					(others => '0') when others;  -- nao faz nada
 					
 	OUT_EQUAL : with sel select
 	
-		flagEqual <= equal when "001",
+		flagEqual <= equal when "001", --seta flag quand A = B
 		'0' when others;
 		
 end arc_ula;

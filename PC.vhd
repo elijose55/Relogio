@@ -20,9 +20,7 @@ architecture arch of PC is
 begin
   process (clk) begin
     if rising_edge(clk) then
-        --if (reset = '1') then
-         -- toout <= (others => '0');
-       -- end if;
+			-- Passa  a entrada para a saida a cada borda de subida do clock
         toout <= input;
   
 

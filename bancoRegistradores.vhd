@@ -38,7 +38,7 @@ begin
     begin
         if (rising_edge(clk)) then
             if (escreveA = '1') then
-                registrador(to_integer(unsigned(enderecoA))) := dadoEscritaA;
+                registrador(to_integer(unsigned(enderecoA))) := dadoEscritaA; -- escreve no registrador A o dado que chega
             end if;
         end if;
     end process;

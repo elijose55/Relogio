@@ -22,9 +22,9 @@ architecture comportamentoMuxBancoReg of muxBancoReg is
 begin
 
 	with sel select 
-		outMux <= inA when "00",
-				  inB when "01",
-				  inC when "10",
+		outMux <= inA when "00", -- passa valor que chega do imediato
+				  inB when "01", -- passa valor que chega da saida da ULA
+				  inC when "10", -- passa valor que chega do I/O
 				  (others => '0') when others;
 
 
