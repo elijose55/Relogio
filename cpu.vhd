@@ -1,8 +1,7 @@
 -- Design de Computadores
--- developed by Larissa Amaral
+-- developed by Pedro Azambuja e Eli Jose
 -- file: cpu.vhd
--- date: 25/09/2019
-
+-- date: date: 08/10/2019
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -85,7 +84,7 @@ begin
         output	    => PC_out
     );
 
-    -- Instanciação do Program Counter
+    -- Instanciação do registrador que armazena a flag de comparacao
     registerFlag : entity work.registerFlag 
     -- generic map (
     -- );

@@ -1,3 +1,8 @@
+-- Design de Computadores
+-- developed by Pedro Azambuja e Eli Jose
+-- file: somadorConstante.vhd
+-- date: 08/10/2019
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -17,7 +22,7 @@ end entity;
 
 architecture arc_somadorConstante of somadorConstante is
 begin
-	-- Incrementa um no valor de entrada
+	-- Incrementa 1 no valor de entrada
 
 	outSomador <= inSomador + 1;
 

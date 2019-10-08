@@ -9,7 +9,7 @@ entity relogio is
 	generic (
 		larguraBarramentoEnderecos	: natural := 8;
 		larguraBarramentoDados		: natural := 8;
-		quantidadeChaves    		: natural := 2;
+		quantidadeChaves    		: natural := 18;
 		quantidadeDisplays			: natural := 8
     );
 	port
@@ -36,7 +36,7 @@ architecture estrutural of relogio is
 	signal writeEnable				: STD_LOGIC;
 
 	-- Sinais de habilitacao dos componentes
-	signal LCD_US, LCD_DS, LCD_UM, LCD_DM, LCD_UH, LCD_DH	: STD_LOGIC;
+	signal LCD_US, LCD_DS, LCD_UM, LCD_DM, LCD_UH, LCD_DH, enable_switch	: STD_LOGIC;
 	--signal habilitaChaves			: STD_LOGIC;
 	signal habilita_BT : STD_LOGIC;
 	signal reset: STD_LOGIC;
@@ -44,29 +44,11 @@ architecture estrutural of relogio is
 	signal saidaDivisorGenerico		: STD_LOGIC_VECTOR(7 downto 0);
 	signal switches : std_logic_vector(1 downto 0);
 
-	signal tick : std_logic;
+	signal tick, switchesTOcpu : std_logic;
     signal contador : integer range 0 to 50000001 := 0;
 	signal divisor : natural := 2000000;
 	
 begin
-
-
-	  process(CLOCK_50)
-    begin
-        if rising_edge(CLOCK_50) then
-					if contador >= divisor then
-						contador <= 0;
-						 tick <= not tick;
-						 
-					else
-						 contador <= contador + 1;
-			
-			end if;
-		  end if;
-			end process;
-
-
-
 	-- Instanciação da CPU
 	CPU : entity work.cpu 
 	port map
@@ -74,11 +56,12 @@ begin
 	
 	LEDG => LEDG(6 downto 0),
 		clk						=> CLOCK_50,
-        barramentoDadosEntrada	=> saidaDivisorGenerico,
+        barramentoDadosEntrada	=> barramentoDadosEntrada,
         barramentoEnderecos		=> barramentoEnderecos,
 		barramentoDadosSaida	=> barramentoDadosSaida,
 		readEnable				=> readEnable,
 		writeEnable				=> writeEnable
+		
 	);
 	
 	-- Instanciação do Decodificador de Endereços
@@ -97,7 +80,8 @@ begin
 		LCD_UH => LCD_UH,
 		LCD_DH => LCD_DH,
 		IO_TEMPO => habilita_BT,
-		CLEAR_TEMPO => reset
+		CLEAR_TEMPO => reset,
+		ENABLE_SWITCH => enable_switch
 		
 	);
 
@@ -174,14 +158,14 @@ begin
 	port map
 	(
 		SW => SW,
-		saida	=> switches
+		saida	=> switches,
+		saida_CPU => switchesTOcpu,
+		enable => enable_switch
 	);
+	barramentoDadosEntrada <= saidaDivisorGenerico when habilita_BT = '1' else ("0000000" & switchesTOcpu) when enable_switch ='1' else "00000000";
 	
-	
-LEDG(7) <= saidaDivisorGenerico(0);
-LEDR(0) <= switches(0);
-LEDR(1) <= switches(1);
+LEDR(0) <= switches(0); -- acende se o primeiro switch estiver ativo
+LEDR(1) <= switches(1); -- acende se o segundo switch estiver ativo
 
-	-- componentes necessários
 
 end architecture;

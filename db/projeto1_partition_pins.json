@@ -200,10 +200,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[7]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[0]",
 					"strict" : false
 				},
@@ -221,6 +217,10 @@
 				},
 				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "SW[17]",
 					"strict" : false
 				}
 			]
