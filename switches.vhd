@@ -28,6 +28,6 @@ begin
 	
 	--sw_out <= sig_sw when (enable = '1') else (others=>'Z');
 	
-	saida <= SW(0) & SW(0);  -- saida de um vetor de 2 bits (dois primeiros switches)
+	saida <= SW(1) & SW(0);  -- saida de um vetor de 2 bits (dois primeiros switches)
 	
 end swArch;

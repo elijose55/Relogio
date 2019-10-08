@@ -53,7 +53,7 @@ reg_address_dict = {
 	'REG_DM':     '01000',
 	'REG_UH':     '10000',
 	'REG_DH':     '10001',
-	'REG_CLEAR':  '11111'
+	'REG_CLEAR':  '01111'
 }
 
 mem_address_dict = {

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto1
-Mon Oct 07 22:54:05 2019
+Tue Oct 08 11:10:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,25 +13,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
- 12. Parameter Settings for User Entity Instance: cpu:CPU
- 13. Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM
- 14. Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR
- 15. Parameter Settings for User Entity Instance: cpu:CPU|PC:PC
- 16. Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC
- 17. Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg
- 18. Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR
- 19. Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA
- 20. Parameter Settings for User Entity Instance: decoder:DE
- 21. Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO
- 22. Parameter Settings for User Entity Instance: switches:CHAVES
- 23. Port Connectivity Checks: "cpu:CPU"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
+ 11. Parameter Settings for User Entity Instance: cpu:CPU
+ 12. Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM
+ 13. Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR
+ 14. Parameter Settings for User Entity Instance: cpu:CPU|PC:PC
+ 15. Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC
+ 16. Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg
+ 17. Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR
+ 18. Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA
+ 19. Parameter Settings for User Entity Instance: decoder:DE
+ 20. Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO
+ 21. Parameter Settings for User Entity Instance: switches:CHAVES
+ 22. Port Connectivity Checks: "cpu:CPU"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -57,15 +56,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 07 22:54:05 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 08 11:10:08 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projeto1                                    ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 287                                         ;
-;     Total combinational functions  ; 203                                         ;
-;     Dedicated logic registers      ; 163                                         ;
-; Total registers                    ; 163                                         ;
+; Total logic elements               ; 691                                         ;
+;     Total combinational functions  ; 408                                         ;
+;     Dedicated logic registers      ; 335                                         ;
+; Total registers                    ; 335                                         ;
 ; Total pins                         ; 85                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -176,7 +175,8 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -208,20 +208,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 287            ;
+; Estimated Total logic elements              ; 691            ;
 ;                                             ;                ;
-; Total combinational functions               ; 203            ;
+; Total combinational functions               ; 408            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 108            ;
-;     -- 3 input functions                    ; 30             ;
-;     -- <=2 input functions                  ; 65             ;
+;     -- 4 input functions                    ; 297            ;
+;     -- 3 input functions                    ; 65             ;
+;     -- <=2 input functions                  ; 46             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 138            ;
-;     -- arithmetic mode                      ; 65             ;
+;     -- normal mode                          ; 368            ;
+;     -- arithmetic mode                      ; 40             ;
 ;                                             ;                ;
-; Total registers                             ; 163            ;
-;     -- Dedicated logic registers            ; 163            ;
+; Total registers                             ; 335            ;
+;     -- Dedicated logic registers            ; 335            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 85             ;
@@ -229,9 +229,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 90             ;
-; Total fan-out                               ; 1296           ;
-; Average fan-out                             ; 2.42           ;
+; Maximum fan-out                             ; 335            ;
+; Total fan-out                               ; 2646           ;
+; Average fan-out                             ; 2.90           ;
 +---------------------------------------------+----------------+
 
 
@@ -240,226 +240,25 @@ refer to the applicable agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
-; |relogio                          ; 203 (35)            ; 163 (27)                  ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |relogio                                   ; relogio            ; work         ;
-;    |baseTempo:BASE_TEMPO|         ; 36 (36)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|baseTempo:BASE_TEMPO              ; baseTempo          ; work         ;
-;    |cpu:CPU|                      ; 114 (0)             ; 73 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                           ; cpu                ; work         ;
+; |relogio                          ; 408 (1)             ; 335 (0)                   ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |relogio                                   ; relogio            ; work         ;
+;    |baseTempo:BASE_TEMPO|         ; 56 (56)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|baseTempo:BASE_TEMPO              ; baseTempo          ; work         ;
+;    |cpu:CPU|                      ; 327 (0)             ; 265 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                           ; cpu                ; work         ;
 ;       |PC:PC|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|PC:PC                     ; PC                 ; work         ;
-;       |UC:UC|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|UC:UC                     ; UC                 ; work         ;
-;       |ULA:ULA|                   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULA:ULA                   ; ULA                ; work         ;
-;       |bancoRegistradores:BR|     ; 53 (53)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|bancoRegistradores:BR     ; bancoRegistradores ; work         ;
-;       |muxBancoReg:MUXBancoReg|   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg   ; muxBancoReg        ; work         ;
+;       |UC:UC|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|UC:UC                     ; UC                 ; work         ;
+;       |ULA:ULA|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULA:ULA                   ; ULA                ; work         ;
+;       |bancoRegistradores:BR|     ; 220 (220)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|bancoRegistradores:BR     ; bancoRegistradores ; work         ;
+;       |muxBancoReg:MUXBancoReg|   ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg   ; muxBancoReg        ; work         ;
 ;       |registerFlag:registerFlag| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registerFlag:registerFlag ; registerFlag       ; work         ;
-;       |romMif:ROM|                ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|romMif:ROM                ; romMif             ; work         ;
-;    |decoder:DE|                   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                        ; decoder            ; work         ;
+;       |romMif:ROM|                ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|romMif:ROM                ; romMif             ; work         ;
+;    |decoder:DE|                   ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                        ; decoder            ; work         ;
 ;    |display7Seg:DISPLAY0|         ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY0              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY1|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY1              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY2|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY2              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY3|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY3              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY4|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY4              ; display7Seg        ; work         ;
+;    |display7Seg:DISPLAY5|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY5              ; display7Seg        ; work         ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+-----------------------------------------------+---------------------------------------------+
-; Register name                                 ; Reason for Removal                          ;
-+-----------------------------------------------+---------------------------------------------+
-; display7Seg:DISPLAY5|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
-; cpu:CPU|bancoRegistradores:BR|registrador~31  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~39  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~63  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~71  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~79  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~87  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~111 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~119 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~159 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~167 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~191 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~199 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~207 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~215 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~239 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~247 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~32  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~40  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~64  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~72  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~80  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~88  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~112 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~120 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~160 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~168 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~192 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~200 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~208 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~216 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~240 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~248 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~33  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~41  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~65  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~73  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~81  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~89  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~113 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~121 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~161 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~169 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~193 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~201 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~209 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~217 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~241 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~249 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~30  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~38  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~62  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~70  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~78  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~86  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~110 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~118 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~158 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~166 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~190 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~198 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~206 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~214 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~238 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~246 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~37  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~45  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~69  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~77  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~85  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~93  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~117 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~125 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~165 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~173 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~197 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~205 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~213 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~221 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~245 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~253 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~36  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~44  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~68  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~76  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~84  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~92  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~116 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~124 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~164 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~172 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~196 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~204 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~212 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~220 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~244 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~252 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~35  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~43  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~67  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~75  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~83  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~91  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~115 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~123 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~163 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~171 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~195 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~203 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~211 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~219 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~243 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~251 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~34  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~42  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~66  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~74  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~82  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~90  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~114 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~122 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~162 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~170 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~194 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~202 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~210 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~218 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~242 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~250 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~95  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~103 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~127 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~135 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~143 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~151 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~175 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~183 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~96  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~104 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~128 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~136 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~144 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~152 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~176 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~184 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~97  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~105 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~129 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~137 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~145 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~153 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~177 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~185 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~94  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~102 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~126 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~134 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~142 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~150 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~174 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~182 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~101 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~109 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~133 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~141 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~149 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~157 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~181 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~189 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~100 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~108 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~132 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~140 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~148 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~156 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~180 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~188 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~99  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~107 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~131 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~139 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~147 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~155 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~179 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~187 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~98  ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~106 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~130 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~138 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~146 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~154 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~178 ; Lost fanout                                 ;
-; cpu:CPU|bancoRegistradores:BR|registrador~186 ; Lost fanout                                 ;
-; Total Number of Removed Registers = 199       ;                                             ;
-+-----------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -467,12 +266,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 163   ;
-; Number of registers using Synchronous Clear  ; 53    ;
+; Total registers                              ; 335   ;
+; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 126   ;
+; Number of registers using Clock Enable       ; 325   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -482,9 +281,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |relogio|baseTempo:BASE_TEMPO|contador[12]    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|UC:UC|wrReg                  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg|Mux5 ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |relogio|baseTempo:BASE_TEMPO|contador[3]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|UC:UC|muxMain[1]             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg|Mux4 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |relogio|baseTempo:BASE_TEMPO|divisor[16]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
@@ -630,25 +430,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 85                          ;
-; cycloneiii_ff         ; 163                         ;
-;     ENA               ; 99                          ;
+; cycloneiii_ff         ; 335                         ;
+;     ENA               ; 298                         ;
 ;     ENA SCLR          ; 27                          ;
-;     SCLR              ; 26                          ;
 ;     SLD               ; 8                           ;
-;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 203                         ;
-;     arith             ; 65                          ;
-;         2 data inputs ; 58                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 408                         ;
+;     arith             ; 40                          ;
+;         2 data inputs ; 33                          ;
 ;         3 data inputs ; 7                           ;
-;     normal            ; 138                         ;
+;     normal            ; 368                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 108                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 297                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.28                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 7.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -657,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -667,7 +466,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 07 22:53:36 2019
+    Info: Processing started: Tue Oct 08 11:09:36 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto1 -c projeto1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
@@ -718,7 +517,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
 Info (12127): Elaborating entity "relogio" for the top level hierarchy
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX6" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX7" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(23): used explicit default value for signal "LEDR" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
 Warning (10540): VHDL Signal Declaration warning at relogio.vhd(49): used explicit default value for signal "divisor" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 49
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 71
 Info (12128): Elaborating entity "romMif" for hierarchy "cpu:CPU|romMif:ROM" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 42
@@ -733,21 +531,44 @@ Info (12128): Elaborating entity "somadorConstante" for hierarchy "cpu:CPU|somad
 Info (12128): Elaborating entity "ULA" for hierarchy "cpu:CPU|ULA:ULA" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 140
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:DE" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 87
 Info (12128): Elaborating entity "baseTempo" for hierarchy "baseTempo:BASE_TEMPO" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 107
-Warning (10540): VHDL Signal Declaration warning at baseTempo.vhd(23): used explicit default value for signal "divisor" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 23
+Info (10041): Inferred latch for "divisor[0]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[1]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[2]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[3]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[4]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[5]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[6]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[7]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[8]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[9]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[10]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[11]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[12]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[13]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[14]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[15]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[16]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[17]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[18]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[19]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[20]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[21]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[22]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[23]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[24]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[25]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[26]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[27]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[28]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[29]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
+Info (10041): Inferred latch for "divisor[30]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
 Info (12128): Elaborating entity "display7Seg" for hierarchy "display7Seg:DISPLAY0" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 118
 Info (12128): Elaborating entity "switches" for hierarchy "switches:CHAVES" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 170
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "cpu:CPU|bancoRegistradores:BR|registrador" is uninferred due to asynchronous read logic File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 34
-Warning (113028): 237 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
-    Warning (113027): Addresses ranging from 19 to 255 are not initialized File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
+Warning (113028): 202 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
+    Warning (113027): Addresses ranging from 54 to 255 are not initialized File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
     Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
     Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
     Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
@@ -762,8 +583,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
     Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
     Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
@@ -781,20 +600,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
     Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 192 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 19
-Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 792 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 303 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Mon Oct 07 22:54:06 2019
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:01:05
+    Info (21061): Implemented 707 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Tue Oct 08 11:10:09 2019
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:01:07
 
 

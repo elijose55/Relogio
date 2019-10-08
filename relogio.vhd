@@ -46,7 +46,7 @@ architecture estrutural of relogio is
 
 	signal tick : std_logic;
     signal contador : integer range 0 to 50000001 := 0;
-	signal divisor : natural := 25000000;
+	signal divisor : natural := 2000000;
 	
 begin
 
@@ -73,7 +73,7 @@ begin
 	(
 	
 	LEDG => LEDG(6 downto 0),
-		clk						=> tick,
+		clk						=> CLOCK_50,
         barramentoDadosEntrada	=> saidaDivisorGenerico,
         barramentoEnderecos		=> barramentoEnderecos,
 		barramentoDadosSaida	=> barramentoDadosSaida,
@@ -179,6 +179,8 @@ begin
 	
 	
 LEDG(7) <= saidaDivisorGenerico(0);
+LEDR(0) <= switches(0);
+LEDR(1) <= switches(1);
 
 	-- componentes necessários
 

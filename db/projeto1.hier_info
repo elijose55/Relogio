@@ -1,32 +1,6 @@
 |relogio
+CLOCK_50 => cpu:CPU.clk
 CLOCK_50 => basetempo:BASE_TEMPO.clk
-CLOCK_50 => tick.CLK
-CLOCK_50 => contador[0].CLK
-CLOCK_50 => contador[1].CLK
-CLOCK_50 => contador[2].CLK
-CLOCK_50 => contador[3].CLK
-CLOCK_50 => contador[4].CLK
-CLOCK_50 => contador[5].CLK
-CLOCK_50 => contador[6].CLK
-CLOCK_50 => contador[7].CLK
-CLOCK_50 => contador[8].CLK
-CLOCK_50 => contador[9].CLK
-CLOCK_50 => contador[10].CLK
-CLOCK_50 => contador[11].CLK
-CLOCK_50 => contador[12].CLK
-CLOCK_50 => contador[13].CLK
-CLOCK_50 => contador[14].CLK
-CLOCK_50 => contador[15].CLK
-CLOCK_50 => contador[16].CLK
-CLOCK_50 => contador[17].CLK
-CLOCK_50 => contador[18].CLK
-CLOCK_50 => contador[19].CLK
-CLOCK_50 => contador[20].CLK
-CLOCK_50 => contador[21].CLK
-CLOCK_50 => contador[22].CLK
-CLOCK_50 => contador[23].CLK
-CLOCK_50 => contador[24].CLK
-CLOCK_50 => contador[25].CLK
 CLOCK_50 => display7seg:DISPLAY0.clk
 CLOCK_50 => display7seg:DISPLAY1.clk
 CLOCK_50 => display7seg:DISPLAY2.clk
@@ -99,8 +73,8 @@ LEDG[4] << cpu:CPU.LEDG[4]
 LEDG[5] << cpu:CPU.LEDG[5]
 LEDG[6] << cpu:CPU.LEDG[6]
 LEDG[7] << basetempo:BASE_TEMPO.saida_clk[0]
-LEDR[0] << <GND>
-LEDR[1] << <GND>
+LEDR[0] << switches:CHAVES.saida[0]
+LEDR[1] << switches:CHAVES.saida[1]
 LEDR[2] << <GND>
 LEDR[3] << <GND>
 LEDR[4] << <GND>
@@ -602,8 +576,14 @@ clk => contador[24].CLK
 clk => contador[25].CLK
 clk => contador[26].CLK
 clk => tick.CLK
-sel[0] => ~NO_FANOUT~
-sel[1] => ~NO_FANOUT~
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[0] => Equal3.IN1
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+sel[1] => Equal3.IN0
 saida_clk[0] <= saida_clk.DB_MAX_OUTPUT_PORT_TYPE
 saida_clk[1] <= <GND>
 saida_clk[2] <= <GND>
@@ -1173,9 +1153,8 @@ saida7seg[6] <= saida7seg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |relogio|switches:CHAVES
 SW[0] => saida[0].DATAIN
-SW[0] => saida[1].DATAIN
-SW[1] => ~NO_FANOUT~
+SW[1] => saida[1].DATAIN
 saida[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
