@@ -1,3 +1,8 @@
+-- Design de Computadores
+-- developed by Pedro Azambuja e Eli Jose
+-- file: decoder.vhd
+-- date: 08/10/2019
+
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -21,7 +26,9 @@ entity decoder is
 		 IO_TEMPO  : out std_logic;
 
 		 -- Endereca o registrado da Base de Tempo para limpar a saida apos a confirmacao da passagem de um segundo
-		 CLEAR_TEMPO  : out std_logic
+		 CLEAR_TEMPO  : out std_logic;
+		 -- Endereca o Switch para selecionar AM/PM
+		 ENABLE_SWITCH  : out std_logic
     );
 end entity;
 
@@ -36,6 +43,7 @@ constant UM : std_logic_vector(larguraEndDecoder-1 downto 0) := "00000101";		-- 
 constant DM : std_logic_vector(larguraEndDecoder-1 downto 0) := "00000110";		-- Display da Dezena de minuto
 constant UH : std_logic_vector(larguraEndDecoder-1 downto 0) := "00000111";		-- Display da Unidade de hora
 constant DH : std_logic_vector(larguraEndDecoder-1 downto 0) := "00001000";		-- Display da Dezena de hora
+constant SWITCH : std_logic_vector(larguraEndDecoder-1 downto 0) := "00001001";		-- Display do SWITCH
 
 
 begin
@@ -51,5 +59,6 @@ begin
 		LCD_DM <= '1' when (endereco = DM AND writeEnable = '1') else '0';
 		LCD_UH <= '1' when (endereco = UH AND writeEnable = '1') else '0';
 		LCD_DH <= '1' when (endereco = DH AND writeEnable = '1') else '0';
+		ENABLE_SWITCH <= '1' when (endereco = SWITCH AND writeEnable = '1') else '0';
 			
 end architecture;

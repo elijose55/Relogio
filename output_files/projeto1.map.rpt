@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto1
-Tue Oct 08 11:10:09 2019
+Tue Oct 08 12:58:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,24 +13,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
- 11. Parameter Settings for User Entity Instance: cpu:CPU
- 12. Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM
- 13. Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR
- 14. Parameter Settings for User Entity Instance: cpu:CPU|PC:PC
- 15. Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC
- 16. Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg
- 17. Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR
- 18. Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA
- 19. Parameter Settings for User Entity Instance: decoder:DE
- 20. Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO
- 21. Parameter Settings for User Entity Instance: switches:CHAVES
- 22. Port Connectivity Checks: "cpu:CPU"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
+ 12. Parameter Settings for User Entity Instance: cpu:CPU
+ 13. Parameter Settings for User Entity Instance: cpu:CPU|romMif:ROM
+ 14. Parameter Settings for User Entity Instance: cpu:CPU|bancoRegistradores:BR
+ 15. Parameter Settings for User Entity Instance: cpu:CPU|PC:PC
+ 16. Parameter Settings for User Entity Instance: cpu:CPU|muxPC:MUXPC
+ 17. Parameter Settings for User Entity Instance: cpu:CPU|muxBancoReg:MUXBancoReg
+ 18. Parameter Settings for User Entity Instance: cpu:CPU|somadorConstante:SOMADOR
+ 19. Parameter Settings for User Entity Instance: cpu:CPU|ULA:ULA
+ 20. Parameter Settings for User Entity Instance: decoder:DE
+ 21. Parameter Settings for User Entity Instance: baseTempo:BASE_TEMPO
+ 22. Parameter Settings for User Entity Instance: switches:CHAVES
+ 23. Port Connectivity Checks: "cpu:CPU"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,16 +57,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 08 11:10:08 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 08 12:58:11 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projeto1                                    ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 691                                         ;
-;     Total combinational functions  ; 408                                         ;
+; Total logic elements               ; 698                                         ;
+;     Total combinational functions  ; 415                                         ;
 ;     Dedicated logic registers      ; 335                                         ;
 ; Total registers                    ; 335                                         ;
-; Total pins                         ; 85                                          ;
+; Total pins                         ; 101                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -166,7 +167,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -174,33 +175,33 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd                 ;         ;
-; somadorConstante.vhd             ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd   ;         ;
-; MuxPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd              ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd                ;         ;
-; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd                 ;         ;
-; MUXBancoReg.vhd                  ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd        ;         ;
-; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd                ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd ;         ;
-; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd                ;         ;
-; switches.vhd                     ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd           ;         ;
-; baseTempo.vhd                    ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd          ;         ;
-; relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd            ;         ;
-; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd            ;         ;
-; display7Seg.vhd                  ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd        ;         ;
-; registerFlag.vhd                 ; yes             ; User VHDL File  ; C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/PC.vhd                 ;         ;
+; somadorConstante.vhd             ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/somadorConstante.vhd   ;         ;
+; MuxPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/MuxPC.vhd              ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/ULA.vhd                ;         ;
+; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/UC.vhd                 ;         ;
+; MUXBancoReg.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/MUXBancoReg.vhd        ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd                ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/bancoRegistradores.vhd ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/ROM.vhd                ;         ;
+; switches.vhd                     ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/switches.vhd           ;         ;
+; baseTempo.vhd                    ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd          ;         ;
+; relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd            ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/decoder.vhd            ;         ;
+; display7Seg.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/display7Seg.vhd        ;         ;
+; registerFlag.vhd                 ; yes             ; User VHDL File  ; C:/Users/Pedro/Documents/Design/Relogio/registerFlag.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -208,30 +209,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 691            ;
+; Estimated Total logic elements              ; 698            ;
 ;                                             ;                ;
-; Total combinational functions               ; 408            ;
+; Total combinational functions               ; 415            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 297            ;
-;     -- 3 input functions                    ; 65             ;
-;     -- <=2 input functions                  ; 46             ;
+;     -- 4 input functions                    ; 303            ;
+;     -- 3 input functions                    ; 67             ;
+;     -- <=2 input functions                  ; 45             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 368            ;
+;     -- normal mode                          ; 375            ;
 ;     -- arithmetic mode                      ; 40             ;
 ;                                             ;                ;
 ; Total registers                             ; 335            ;
 ;     -- Dedicated logic registers            ; 335            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 85             ;
+; I/O pins                                    ; 101            ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 335            ;
-; Total fan-out                               ; 2646           ;
-; Average fan-out                             ; 2.90           ;
+; Total fan-out                               ; 2689           ;
+; Average fan-out                             ; 2.82           ;
 +---------------------------------------------+----------------+
 
 
@@ -240,25 +241,37 @@ refer to the applicable agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
-; |relogio                          ; 408 (1)             ; 335 (0)                   ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |relogio                                   ; relogio            ; work         ;
-;    |baseTempo:BASE_TEMPO|         ; 56 (56)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|baseTempo:BASE_TEMPO              ; baseTempo          ; work         ;
-;    |cpu:CPU|                      ; 327 (0)             ; 265 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                           ; cpu                ; work         ;
+; |relogio                          ; 415 (1)             ; 335 (0)                   ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |relogio                                   ; relogio            ; work         ;
+;    |baseTempo:BASE_TEMPO|         ; 55 (55)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|baseTempo:BASE_TEMPO              ; baseTempo          ; work         ;
+;    |cpu:CPU|                      ; 330 (0)             ; 265 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                           ; cpu                ; work         ;
 ;       |PC:PC|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|PC:PC                     ; PC                 ; work         ;
 ;       |UC:UC|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|UC:UC                     ; UC                 ; work         ;
 ;       |ULA:ULA|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULA:ULA                   ; ULA                ; work         ;
 ;       |bancoRegistradores:BR|     ; 220 (220)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|bancoRegistradores:BR     ; bancoRegistradores ; work         ;
-;       |muxBancoReg:MUXBancoReg|   ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg   ; muxBancoReg        ; work         ;
+;       |muxBancoReg:MUXBancoReg|   ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg   ; muxBancoReg        ; work         ;
 ;       |registerFlag:registerFlag| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registerFlag:registerFlag ; registerFlag       ; work         ;
-;       |romMif:ROM|                ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|romMif:ROM                ; romMif             ; work         ;
-;    |decoder:DE|                   ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                        ; decoder            ; work         ;
+;       |romMif:ROM|                ; 72 (72)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|romMif:ROM                ; romMif             ; work         ;
+;    |decoder:DE|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                        ; decoder            ; work         ;
 ;    |display7Seg:DISPLAY0|         ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY0              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY1|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY1              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY2|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY2              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY3|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY3              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY4|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY4              ; display7Seg        ; work         ;
 ;    |display7Seg:DISPLAY5|         ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|display7Seg:DISPLAY5              ; display7Seg        ; work         ;
+;    |switches:CHAVES|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|switches:CHAVES                   ; switches           ; work         ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++----------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------+------------------------+
+; switches:CHAVES|saida_CPU                          ; decoder:DE|ENABLE_SWITCH ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                          ;                        ;
++----------------------------------------------------+--------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -281,9 +294,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |relogio|baseTempo:BASE_TEMPO|contador[3]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|UC:UC|muxMain[1]             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg|Mux4 ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |relogio|baseTempo:BASE_TEMPO|contador[12]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|UC:UC|wrReg                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|muxBancoReg:MUXBancoReg|Mux2 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |relogio|baseTempo:BASE_TEMPO|divisor[16]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
@@ -295,7 +308,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------+------------------------------------+
 ; larguraBarramentoEnderecos ; 8     ; Signed Integer                     ;
 ; larguraBarramentoDados     ; 8     ; Signed Integer                     ;
-; quantidadeChaves           ; 2     ; Signed Integer                     ;
+; quantidadeChaves           ; 18    ; Signed Integer                     ;
 ; quantidadeDisplays         ; 8     ; Signed Integer                     ;
 +----------------------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -410,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+-------+-----------------------------------+
 ; Parameter Name   ; Value ; Type                              ;
 +------------------+-------+-----------------------------------+
-; quantidadechaves ; 2     ; Signed Integer                    ;
+; quantidadechaves ; 18    ; Signed Integer                    ;
 +------------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -429,25 +442,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 85                          ;
+; boundary_port         ; 101                         ;
 ; cycloneiii_ff         ; 335                         ;
 ;     ENA               ; 298                         ;
 ;     ENA SCLR          ; 27                          ;
 ;     SLD               ; 8                           ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 408                         ;
+; cycloneiii_lcell_comb ; 415                         ;
 ;     arith             ; 40                          ;
 ;         2 data inputs ; 33                          ;
 ;         3 data inputs ; 7                           ;
-;     normal            ; 368                         ;
+;     normal            ; 375                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 297                         ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 60                          ;
+;         4 data inputs ; 303                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 7.21                        ;
+; Average LUT depth     ; 7.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -456,7 +469,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -466,150 +479,169 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 08 11:09:36 2019
+    Info: Processing started: Tue Oct 08 12:57:43 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto1 -c projeto1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: PC-arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd Line: 17
-    Info (12023): Found entity 1: PC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd Line: 5
+    Info (12022): Found design unit 1: PC-arch File: C:/Users/Pedro/Documents/Design/Relogio/PC.vhd Line: 22
+    Info (12023): Found entity 1: PC File: C:/Users/Pedro/Documents/Design/Relogio/PC.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file somadorconstante.vhd
-    Info (12022): Found design unit 1: somadorConstante-arc_somadorConstante File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd Line: 18
-    Info (12023): Found entity 1: somadorConstante File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd Line: 6
+    Info (12022): Found design unit 1: somadorConstante-arc_somadorConstante File: C:/Users/Pedro/Documents/Design/Relogio/somadorConstante.vhd Line: 23
+    Info (12023): Found entity 1: somadorConstante File: C:/Users/Pedro/Documents/Design/Relogio/somadorConstante.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file muxpc.vhd
-    Info (12022): Found design unit 1: muxPC-comportamentoMuxPc File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd Line: 20
-    Info (12023): Found entity 1: muxPC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd Line: 6
+    Info (12022): Found design unit 1: muxPC-comportamentoMuxPc File: C:/Users/Pedro/Documents/Design/Relogio/MuxPC.vhd Line: 26
+    Info (12023): Found entity 1: muxPC File: C:/Users/Pedro/Documents/Design/Relogio/MuxPC.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-arc_ula File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd Line: 21
-    Info (12023): Found entity 1: ULA File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd Line: 6
+    Info (12022): Found design unit 1: ULA-arc_ula File: C:/Users/Pedro/Documents/Design/Relogio/ULA.vhd Line: 26
+    Info (12023): Found entity 1: ULA File: C:/Users/Pedro/Documents/Design/Relogio/ULA.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: UC-UCarch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd Line: 18
-    Info (12023): Found entity 1: UC File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd Line: 4
+    Info (12022): Found design unit 1: UC-UCarch File: C:/Users/Pedro/Documents/Design/Relogio/UC.vhd Line: 23
+    Info (12023): Found entity 1: UC File: C:/Users/Pedro/Documents/Design/Relogio/UC.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file muxbancoreg.vhd
-    Info (12022): Found design unit 1: muxBancoReg-comportamentoMuxBancoReg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd Line: 21
-    Info (12023): Found entity 1: muxBancoReg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd Line: 6
+    Info (12022): Found design unit 1: muxBancoReg-comportamentoMuxBancoReg File: C:/Users/Pedro/Documents/Design/Relogio/MUXBancoReg.vhd Line: 26
+    Info (12023): Found entity 1: muxBancoReg File: C:/Users/Pedro/Documents/Design/Relogio/MUXBancoReg.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-estrutural File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 28
-    Info (12023): Found entity 1: cpu File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 9
+    Info (12022): Found design unit 1: cpu-estrutural File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 27
+    Info (12023): Found entity 1: cpu File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 28
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 7
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Pedro/Documents/Design/Relogio/bancoRegistradores.vhd Line: 34
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Pedro/Documents/Design/Relogio/bancoRegistradores.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 19
-    Info (12023): Found entity 1: romMif File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 5
+    Info (12022): Found design unit 1: romMif-initFileROM File: C:/Users/Pedro/Documents/Design/Relogio/ROM.vhd Line: 26
+    Info (12023): Found entity 1: romMif File: C:/Users/Pedro/Documents/Design/Relogio/ROM.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file switches.vhd
-    Info (12022): Found design unit 1: switches-swArch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd Line: 21
-    Info (12023): Found entity 1: switches File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd Line: 7
+    Info (12022): Found design unit 1: switches-swArch File: C:/Users/Pedro/Documents/Design/Relogio/switches.vhd Line: 29
+    Info (12023): Found entity 1: switches File: C:/Users/Pedro/Documents/Design/Relogio/switches.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file basetempo.vhd
-    Info (12022): Found design unit 1: baseTempo-arch_baseTempo File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 19
-    Info (12023): Found entity 1: baseTempo File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 5
+    Info (12022): Found design unit 1: baseTempo-arch_baseTempo File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 23
+    Info (12023): Found entity 1: baseTempo File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-estrutural File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 27
-    Info (12023): Found entity 1: relogio File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 8
+    Info (12022): Found design unit 1: relogio-estrutural File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 27
+    Info (12023): Found entity 1: relogio File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: decoder-Decoder_arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd Line: 28
-    Info (12023): Found entity 1: decoder File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd Line: 5
+    Info (12022): Found design unit 1: decoder-Decoder_arch File: C:/Users/Pedro/Documents/Design/Relogio/decoder.vhd Line: 35
+    Info (12023): Found entity 1: decoder File: C:/Users/Pedro/Documents/Design/Relogio/decoder.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file display7seg.vhd
-    Info (12022): Found design unit 1: display7Seg-comportamento File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd Line: 19
-    Info (12023): Found entity 1: display7Seg File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: display7Seg-comportamento File: C:/Users/Pedro/Documents/Design/Relogio/display7Seg.vhd Line: 21
+    Info (12023): Found entity 1: display7Seg File: C:/Users/Pedro/Documents/Design/Relogio/display7Seg.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file registerflag.vhd
-    Info (12022): Found design unit 1: registerFlag-arch File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd Line: 14
-    Info (12023): Found entity 1: registerFlag File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd Line: 5
+    Info (12022): Found design unit 1: registerFlag-arch File: C:/Users/Pedro/Documents/Design/Relogio/registerFlag.vhd Line: 19
+    Info (12023): Found entity 1: registerFlag File: C:/Users/Pedro/Documents/Design/Relogio/registerFlag.vhd Line: 11
 Info (12127): Elaborating entity "relogio" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX6" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX7" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-Warning (10540): VHDL Signal Declaration warning at relogio.vhd(49): used explicit default value for signal "divisor" because signal was never assigned a value File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 49
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 71
-Info (12128): Elaborating entity "romMif" for hierarchy "cpu:CPU|romMif:ROM" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 42
-Warning (10541): VHDL Signal Declaration warning at ROM.vhd(22): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd Line: 22
-Info (12128): Elaborating entity "UC" for hierarchy "cpu:CPU|UC:UC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 50
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "cpu:CPU|bancoRegistradores:BR" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 64
-Info (12128): Elaborating entity "PC" for hierarchy "cpu:CPU|PC:PC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 78
-Info (12128): Elaborating entity "registerFlag" for hierarchy "cpu:CPU|registerFlag:registerFlag" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 89
-Info (12128): Elaborating entity "muxPC" for hierarchy "cpu:CPU|muxPC:MUXPC" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 100
-Info (12128): Elaborating entity "muxBancoReg" for hierarchy "cpu:CPU|muxBancoReg:MUXBancoReg" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 113
-Info (12128): Elaborating entity "somadorConstante" for hierarchy "cpu:CPU|somadorConstante:SOMADOR" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 128
-Info (12128): Elaborating entity "ULA" for hierarchy "cpu:CPU|ULA:ULA" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd Line: 140
-Info (12128): Elaborating entity "decoder" for hierarchy "decoder:DE" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 87
-Info (12128): Elaborating entity "baseTempo" for hierarchy "baseTempo:BASE_TEMPO" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 107
-Info (10041): Inferred latch for "divisor[0]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[1]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[2]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[3]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[4]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[5]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[6]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[7]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[8]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[9]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[10]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[11]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[12]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[13]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[14]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[15]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[16]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[17]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[18]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[19]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[20]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[21]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[22]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[23]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[24]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[25]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[26]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[27]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[28]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[29]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (10041): Inferred latch for "divisor[30]" at baseTempo.vhd(26) File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd Line: 26
-Info (12128): Elaborating entity "display7Seg" for hierarchy "display7Seg:DISPLAY0" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 118
-Info (12128): Elaborating entity "switches" for hierarchy "switches:CHAVES" File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 170
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX6" because signal was never assigned a value File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at relogio.vhd(21): used explicit default value for signal "HEX7" because signal was never assigned a value File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+Warning (10873): Using initial value X (don't care) for net "LEDG[7]" at relogio.vhd(22) File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 22
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 53
+Info (12128): Elaborating entity "romMif" for hierarchy "cpu:CPU|romMif:ROM" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at ROM.vhd(29): used implicit default value for signal "content" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro/Documents/Design/Relogio/ROM.vhd Line: 29
+Info (12128): Elaborating entity "UC" for hierarchy "cpu:CPU|UC:UC" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 49
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "cpu:CPU|bancoRegistradores:BR" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 63
+Info (12128): Elaborating entity "PC" for hierarchy "cpu:CPU|PC:PC" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 77
+Info (12128): Elaborating entity "registerFlag" for hierarchy "cpu:CPU|registerFlag:registerFlag" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 88
+Info (12128): Elaborating entity "muxPC" for hierarchy "cpu:CPU|muxPC:MUXPC" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 99
+Info (12128): Elaborating entity "muxBancoReg" for hierarchy "cpu:CPU|muxBancoReg:MUXBancoReg" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 112
+Info (12128): Elaborating entity "somadorConstante" for hierarchy "cpu:CPU|somadorConstante:SOMADOR" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 127
+Info (12128): Elaborating entity "ULA" for hierarchy "cpu:CPU|ULA:ULA" File: C:/Users/Pedro/Documents/Design/Relogio/cpu.vhd Line: 139
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:DE" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 70
+Info (12128): Elaborating entity "baseTempo" for hierarchy "baseTempo:BASE_TEMPO" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 91
+Info (10041): Inferred latch for "divisor[0]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[1]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[2]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[3]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[4]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[5]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[6]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[7]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[8]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[9]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[10]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[11]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[12]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[13]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[14]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[15]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[16]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[17]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[18]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[19]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[20]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[21]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[22]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[23]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[24]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[25]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[26]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[27]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[28]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[29]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (10041): Inferred latch for "divisor[30]" at baseTempo.vhd(29) File: C:/Users/Pedro/Documents/Design/Relogio/baseTempo.vhd Line: 29
+Info (12128): Elaborating entity "display7Seg" for hierarchy "display7Seg:DISPLAY0" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 102
+Info (12128): Elaborating entity "switches" for hierarchy "switches:CHAVES" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 154
+Info (10041): Inferred latch for "saida_CPU" at switches.vhd(35) File: C:/Users/Pedro/Documents/Design/Relogio/switches.vhd Line: 35
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "cpu:CPU|bancoRegistradores:BR|registrador" is uninferred due to asynchronous read logic File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd Line: 34
-Warning (113028): 202 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
-    Warning (113027): Addresses ranging from 54 to 255 are not initialized File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/binario.mif Line: 1
+    Info (276007): RAM logic "cpu:CPU|bancoRegistradores:BR|registrador" is uninferred due to asynchronous read logic File: C:/Users/Pedro/Documents/Design/Relogio/bancoRegistradores.vhd Line: 40
+Warning (113028): 202 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Pedro/Documents/Design/Relogio/binario.mif Line: 1
+    Warning (113027): Addresses ranging from 54 to 255 are not initialized File: C:/Users/Pedro/Documents/Design/Relogio/binario.mif Line: 1
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 21
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 21
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 792 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/Pedro/Documents/Design/Relogio/relogio.vhd Line: 19
+Info (21057): Implemented 815 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 707 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Tue Oct 08 11:10:09 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:01:07
+    Info (21061): Implemented 714 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Tue Oct 08 12:58:11 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:53
 
 

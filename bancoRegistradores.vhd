@@ -1,3 +1,9 @@
+-- Design de Computadores
+-- developed by Pedro Azambuja e Eli Jose
+-- file: bancoRegistradores.vhd
+-- date: 08/10/2019
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
