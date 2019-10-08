@@ -1,5 +1,5 @@
 Timing Analyzer report for projeto1
-Tue Oct 08 11:11:08 2019
+Tue Oct 08 13:23:33 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -98,13 +98,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   9.9%      ;
-;     Processors 3-4         ;   1.5%      ;
+;     Processor 2            ;   1.9%      ;
+;     Processors 3-4         ;   1.6%      ;
 +----------------------------+-------------+
 
 
@@ -122,7 +122,7 @@ refer to the applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 87.42 MHz ; 87.42 MHz       ; CLOCK_50   ;      ;
+; 85.48 MHz ; 85.48 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +----------+---------+----------------+
 ; Clock    ; Slack   ; End Point TNS  ;
 +----------+---------+----------------+
-; CLOCK_50 ; -10.439 ; -2969.006      ;
+; CLOCK_50 ; -10.699 ; -2951.531      ;
 +----------+---------+----------------+
 
 
@@ -147,7 +147,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.637 ; 0.000           ;
+; CLOCK_50 ; 0.562 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -177,106 +177,106 @@ No paths to report.
 +---------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                           ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
-; -10.439 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 11.196     ;
-; -10.431 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 11.189     ;
-; -10.272 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 11.029     ;
-; -10.221 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.978     ;
-; -10.213 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.971     ;
-; -10.198 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.956     ;
-; -10.195 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.952     ;
-; -10.185 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.942     ;
-; -10.171 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.928     ;
-; -10.154 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.920     ;
-; -10.089 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.881     ;
-; -10.087 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.845     ;
-; -10.080 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.837     ;
-; -10.073 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.831     ;
-; -10.005 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.771     ;
-; -10.002 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.760     ;
-; -9.937  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.694     ;
-; -9.936  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.702     ;
-; -9.927  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.146     ; 10.666     ;
-; -9.909  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.712     ;
-; -9.903  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.683     ;
-; -9.884  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.673     ;
-; -9.882  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.640     ;
-; -9.871  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.663     ;
-; -9.861  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.196     ; 10.550     ;
-; -9.847  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.639     ;
-; -9.817  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.545     ;
-; -9.816  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.582     ;
-; -9.788  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 10.588     ;
-; -9.774  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.561     ;
-; -9.770  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.557     ;
-; -9.760  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.563     ;
-; -9.755  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.544     ;
-; -9.751  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.143     ; 10.493     ;
-; -9.745  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.537     ;
-; -9.737  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.146     ; 10.476     ;
-; -9.736  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.494     ;
-; -9.736  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.516     ;
-; -9.733  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 10.532     ;
-; -9.732  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.196     ; 10.421     ;
-; -9.731  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.523     ;
-; -9.725  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.491     ;
-; -9.709  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.146     ; 10.448     ;
-; -9.691  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.494     ;
-; -9.688  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.454     ;
-; -9.685  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.465     ;
-; -9.667  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.105     ; 10.445     ;
-; -9.666  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.455     ;
-; -9.664  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.430     ;
-; -9.660  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.452     ;
-; -9.659  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.439     ;
-; -9.649  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.429     ;
-; -9.643  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.196     ; 10.332     ;
-; -9.639  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 10.439     ;
-; -9.635  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.415     ;
-; -9.631  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.411     ;
-; -9.625  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.412     ;
-; -9.622  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.143     ; 10.364     ;
-; -9.609  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.105     ; 10.387     ;
-; -9.605  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 10.404     ;
-; -9.604  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 10.403     ;
-; -9.599  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.327     ;
-; -9.598  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.092     ; 10.389     ;
-; -9.584  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.312     ;
-; -9.571  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.374     ;
-; -9.570  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 10.370     ;
-; -9.566  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.355     ;
-; -9.563  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.172     ; 10.276     ;
-; -9.556  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.343     ;
-; -9.552  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.339     ;
-; -9.548  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.146     ; 10.287     ;
-; -9.544  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.324     ;
-; -9.543  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.196     ; 10.232     ;
-; -9.540  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.091     ; 10.332     ;
-; -9.538  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.165     ; 10.258     ;
-; -9.538  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.092     ; 10.329     ;
-; -9.537  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 10.324     ;
-; -9.533  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.143     ; 10.275     ;
-; -9.530  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.143     ; 10.272     ;
-; -9.524  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.304     ;
-; -9.522  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.092     ; 10.313     ;
-; -9.520  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.151     ; 10.254     ;
-; -9.515  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 10.314     ;
-; -9.498  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.146     ; 10.237     ;
-; -9.495  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.223     ;
-; -9.480  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.283     ;
-; -9.480  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.105     ; 10.258     ;
-; -9.477  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.105     ; 10.255     ;
-; -9.475  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 10.234     ;
-; -9.475  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.165     ; 10.195     ;
-; -9.473  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.201     ;
-; -9.461  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.250     ;
-; -9.459  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.157     ; 10.187     ;
-; -9.455  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.244     ;
-; -9.454  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 10.220     ;
-; -9.450  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.083     ; 10.250     ;
-; -9.449  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.105     ; 10.227     ;
-; -9.443  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 10.246     ;
-; -9.441  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.221     ;
-; -9.438  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 10.227     ;
+; -10.699 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.475     ;
+; -10.670 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.446     ;
+; -10.623 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.399     ;
+; -10.587 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.363     ;
+; -10.569 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.345     ;
+; -10.530 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.305     ;
+; -10.495 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.270     ;
+; -10.487 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.263     ;
+; -10.463 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.239     ;
+; -10.458 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.233     ;
+; -10.438 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.213     ;
+; -10.420 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.195     ;
+; -10.315 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 11.090     ;
+; -10.278 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.107     ; 11.054     ;
+; -10.185 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 10.960     ;
+; -10.145 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.852     ;
+; -10.116 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.823     ;
+; -10.090 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 10.865     ;
+; -10.079 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.786     ;
+; -10.074 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.881     ;
+; -10.045 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.852     ;
+; -10.022 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.729     ;
+; -10.017 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.724     ;
+; -10.008 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.815     ;
+; -10.001 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.708     ;
+; -9.970  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.780     ;
+; -9.969  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.676     ;
+; -9.951  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.758     ;
+; -9.946  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.753     ;
+; -9.941  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.751     ;
+; -9.930  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.737     ;
+; -9.920  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.718     ;
+; -9.903  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.708     ;
+; -9.898  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.705     ;
+; -9.894  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.704     ;
+; -9.885  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.683     ;
+; -9.874  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.679     ;
+; -9.848  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.646     ;
+; -9.831  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.641     ;
+; -9.828  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.626     ;
+; -9.827  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.632     ;
+; -9.813  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.623     ;
+; -9.810  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.608     ;
+; -9.809  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.178     ; 10.516     ;
+; -9.791  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.596     ;
+; -9.784  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.568     ;
+; -9.773  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.578     ;
+; -9.755  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.539     ;
+; -9.738  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 10.545     ;
+; -9.734  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.544     ;
+; -9.730  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.540     ;
+; -9.718  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.502     ;
+; -9.705  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.514     ;
+; -9.705  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.514     ;
+; -9.705  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.503     ;
+; -9.691  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.496     ;
+; -9.676  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.485     ;
+; -9.667  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.472     ;
+; -9.663  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.459     ;
+; -9.661  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.445     ;
+; -9.656  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.465     ;
+; -9.656  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.440     ;
+; -9.640  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.424     ;
+; -9.639  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.396     ;
+; -9.634  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.430     ;
+; -9.629  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.438     ;
+; -9.619  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.428     ;
+; -9.613  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.422     ;
+; -9.610  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.367     ;
+; -9.608  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 10.392     ;
+; -9.607  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 10.424     ;
+; -9.597  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.393     ;
+; -9.595  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.404     ;
+; -9.581  ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.341     ;
+; -9.578  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 10.395     ;
+; -9.575  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.373     ;
+; -9.573  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.330     ;
+; -9.566  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.375     ;
+; -9.548  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.357     ;
+; -9.546  ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.306     ;
+; -9.541  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 10.358     ;
+; -9.540  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.336     ;
+; -9.535  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.331     ;
+; -9.522  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 10.332     ;
+; -9.519  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.315     ;
+; -9.516  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.273     ;
+; -9.511  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.268     ;
+; -9.509  ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.269     ;
+; -9.495  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.252     ;
+; -9.489  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.249     ;
+; -9.487  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 10.283     ;
+; -9.484  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 10.301     ;
+; -9.482  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.078     ; 10.287     ;
+; -9.480  ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 10.278     ;
+; -9.479  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 10.296     ;
+; -9.476  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.285     ;
+; -9.471  ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.125     ; 10.231     ;
+; -9.469  ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.278     ;
+; -9.465  ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 10.274     ;
+; -9.463  ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 10.220     ;
 +---------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -285,106 +285,106 @@ No paths to report.
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.562 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.827      ;
 ; 0.637 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.902      ;
 ; 0.643 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.908      ;
-; 0.644 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.909      ;
-; 0.645 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.910      ;
+; 0.644 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.909      ;
+; 0.644 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.909      ;
 ; 0.645 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.910      ;
-; 0.647 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.912      ;
-; 0.649 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.914      ;
-; 0.656 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.921      ;
-; 0.658 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.923      ;
-; 0.659 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
-; 0.659 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
+; 0.648 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.913      ;
+; 0.648 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.913      ;
+; 0.655 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.920      ;
+; 0.658 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.923      ;
+; 0.658 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.923      ;
+; 0.659 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.660 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
-; 0.660 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
+; 0.660 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.661 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.926      ;
-; 0.663 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
+; 0.662 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.928      ;
 ; 0.663 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.928      ;
-; 0.663 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.930      ;
-; 0.665 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.930      ;
-; 0.665 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.930      ;
-; 0.665 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.930      ;
-; 0.669 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.936      ;
-; 0.676 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.943      ;
-; 0.681 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.948      ;
-; 0.683 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.950      ;
-; 0.705 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.972      ;
-; 0.806 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.071      ;
-; 0.829 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.094      ;
-; 0.863 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.130      ;
+; 0.664 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.929      ;
+; 0.667 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.932      ;
+; 0.668 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.934      ;
+; 0.670 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.935      ;
+; 0.671 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 0.936      ;
+; 0.672 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.938      ;
+; 0.682 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.948      ;
+; 0.706 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.972      ;
+; 0.804 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.069      ;
+; 0.849 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.114      ;
+; 0.858 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.124      ;
+; 0.878 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.144      ;
 ; 0.954 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.219      ;
 ; 0.961 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.226      ;
 ; 0.962 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.227      ;
-; 0.972 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.237      ;
-; 0.976 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
-; 0.976 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
+; 0.962 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.227      ;
+; 0.963 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.228      ;
+; 0.968 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.233      ;
+; 0.971 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.236      ;
+; 0.975 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.240      ;
+; 0.975 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.240      ;
 ; 0.976 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
-; 0.976 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
-; 0.976 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
+; 0.976 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.241      ;
 ; 0.977 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
 ; 0.977 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
 ; 0.977 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
 ; 0.977 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
-; 0.977 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.242      ;
-; 0.981 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.246      ;
-; 0.982 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.247      ;
-; 0.983 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.248      ;
+; 0.980 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.246      ;
+; 0.980 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.245      ;
+; 0.984 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.249      ;
+; 0.985 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.250      ;
 ; 0.986 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.251      ;
+; 0.986 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.251      ;
 ; 0.986 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.251      ;
-; 0.987 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.254      ;
 ; 0.987 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.252      ;
 ; 0.988 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.253      ;
-; 0.988 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.253      ;
-; 0.990 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.255      ;
 ; 0.990 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.255      ;
-; 0.990 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.257      ;
+; 0.990 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.255      ;
 ; 0.991 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.256      ;
+; 0.991 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.256      ;
 ; 0.991 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.256      ;
-; 0.992 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.257      ;
 ; 0.992 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.257      ;
 ; 0.993 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.258      ;
-; 0.994 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.261      ;
-; 0.995 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.262      ;
+; 0.995 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.261      ;
 ; 0.995 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.260      ;
-; 0.995 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.260      ;
-; 0.997 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.074      ; 1.257      ;
-; 0.997 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.262      ;
-; 0.998 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.265      ;
-; 1.002 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.074      ; 1.262      ;
-; 1.009 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.276      ;
-; 1.010 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.277      ;
-; 1.014 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.281      ;
-; 1.015 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.282      ;
+; 0.997 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.262      ;
+; 0.998 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.263      ;
+; 0.999 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.265      ;
+; 0.999 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.265      ;
+; 0.999 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.256      ;
+; 1.002 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.267      ;
+; 1.003 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.268      ;
+; 1.004 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.261      ;
+; 1.004 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.270      ;
+; 1.010 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.276      ;
+; 1.015 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.281      ;
 ; 1.075 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.340      ;
-; 1.075 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.340      ;
 ; 1.080 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.345      ;
 ; 1.082 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.347      ;
 ; 1.083 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.348      ;
+; 1.083 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.348      ;
 ; 1.087 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.352      ;
 ; 1.088 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.353      ;
-; 1.093 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.360      ;
-; 1.097 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.362      ;
-; 1.097 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.362      ;
-; 1.097 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.362      ;
+; 1.088 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.353      ;
+; 1.089 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.354      ;
+; 1.094 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.359      ;
 ; 1.097 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.362      ;
+; 1.097 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.362      ;
 ; 1.098 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.363      ;
 ; 1.098 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.363      ;
 ; 1.098 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.363      ;
-; 1.098 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.363      ;
-; 1.102 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
-; 1.102 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
-; 1.102 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
+; 1.099 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.365      ;
+; 1.101 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.367      ;
+; 1.101 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.366      ;
 ; 1.102 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
-; 1.102 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
+; 1.102 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.367      ;
 ; 1.103 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.368      ;
-; 1.103 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 1.368      ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -399,7 +399,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 96.03 MHz ; 96.03 MHz       ; CLOCK_50   ;      ;
+; 93.33 MHz ; 93.33 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -9.413 ; -2679.205      ;
+; CLOCK_50 ; -9.715 ; -2669.517      ;
 +----------+--------+----------------+
 
 
@@ -418,7 +418,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.583 ; 0.000          ;
+; CLOCK_50 ; 0.517 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -448,106 +448,106 @@ No paths to report.
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                           ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
-; -9.413 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 10.182     ;
-; -9.396 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 10.167     ;
-; -9.236 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 10.005     ;
-; -9.220 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.989      ;
-; -9.206 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.975      ;
-; -9.203 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.974      ;
-; -9.194 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.965      ;
-; -9.166 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.935      ;
-; -9.160 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.962      ;
-; -9.150 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.919      ;
-; -9.143 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.914      ;
-; -9.138 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.916      ;
-; -9.138 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.909      ;
-; -9.066 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.835      ;
-; -9.020 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.798      ;
-; -9.019 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.790      ;
-; -8.976 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.747      ;
-; -8.967 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.769      ;
-; -8.955 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.769      ;
-; -8.955 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.757      ;
-; -8.949 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.708      ;
-; -8.945 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.723      ;
-; -8.943 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.650      ;
-; -8.942 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.118     ; 9.711      ;
-; -8.934 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.724      ;
-; -8.918 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.718      ;
-; -8.916 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.694      ;
-; -8.907 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.709      ;
-; -8.902 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.704      ;
-; -8.886 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.628      ;
-; -8.861 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 9.672      ;
-; -8.846 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.624      ;
-; -8.837 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.651      ;
-; -8.831 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.590      ;
-; -8.830 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.608      ;
-; -8.825 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.532      ;
-; -8.816 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.116     ; 9.587      ;
-; -8.804 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.603      ;
-; -8.802 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 9.612      ;
-; -8.800 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.600      ;
-; -8.786 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 9.548      ;
-; -8.786 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.585      ;
-; -8.783 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.585      ;
-; -8.762 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.576      ;
-; -8.757 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.547      ;
-; -8.756 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.515      ;
-; -8.750 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.457      ;
-; -8.743 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 9.554      ;
-; -8.741 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.531      ;
-; -8.740 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.542      ;
-; -8.733 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.511      ;
-; -8.733 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.547      ;
-; -8.727 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.517      ;
-; -8.727 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.486      ;
-; -8.725 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.525      ;
-; -8.721 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.428      ;
-; -8.701 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.491      ;
-; -8.696 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.086     ; 9.497      ;
-; -8.696 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.496      ;
-; -8.693 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.435      ;
-; -8.687 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.477      ;
-; -8.684 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 9.494      ;
-; -8.681 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.423      ;
-; -8.675 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.095     ; 9.467      ;
-; -8.671 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.461      ;
-; -8.668 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 9.479      ;
-; -8.668 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 9.430      ;
-; -8.668 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.467      ;
-; -8.665 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.455      ;
-; -8.663 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.477      ;
-; -8.660 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 9.470      ;
-; -8.657 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.416      ;
-; -8.651 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.358      ;
-; -8.647 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.461      ;
-; -8.641 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.130     ; 9.400      ;
-; -8.639 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.076     ; 9.450      ;
-; -8.635 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.182     ; 9.342      ;
-; -8.633 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.086     ; 9.434      ;
-; -8.633 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.375      ;
-; -8.632 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.153     ; 9.368      ;
-; -8.630 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.156     ; 9.363      ;
-; -8.628 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.370      ;
-; -8.626 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.426      ;
-; -8.622 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 9.400      ;
-; -8.611 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.410      ;
-; -8.610 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.087     ; 9.410      ;
-; -8.609 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 9.419      ;
-; -8.604 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.403      ;
-; -8.603 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.140     ; 9.352      ;
-; -8.593 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.095     ; 9.385      ;
-; -8.593 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 9.355      ;
-; -8.593 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.088     ; 9.392      ;
-; -8.592 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 9.354      ;
-; -8.592 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.112     ; 9.369      ;
-; -8.590 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 9.393      ;
-; -8.587 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.377      ;
-; -8.586 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.147     ; 9.328      ;
-; -8.583 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.097     ; 9.373      ;
-; -8.580 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.085     ; 9.382      ;
-; -8.580 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 9.390      ;
+; -9.715 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.501     ;
+; -9.691 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.477     ;
+; -9.678 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.464     ;
+; -9.577 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.363     ;
+; -9.567 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.353     ;
+; -9.562 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.348     ;
+; -9.561 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.345     ;
+; -9.544 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.330     ;
+; -9.537 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.321     ;
+; -9.524 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.308     ;
+; -9.450 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.234     ;
+; -9.412 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.196     ;
+; -9.393 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.177     ;
+; -9.329 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.101     ; 10.115     ;
+; -9.270 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 10.054     ;
+; -9.247 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.969      ;
+; -9.242 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.964      ;
+; -9.210 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.932      ;
+; -9.203 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 9.987      ;
+; -9.191 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.913      ;
+; -9.181 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.903      ;
+; -9.174 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.989      ;
+; -9.169 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.984      ;
+; -9.137 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.952      ;
+; -9.128 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.850      ;
+; -9.118 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.933      ;
+; -9.108 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.925      ;
+; -9.108 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.923      ;
+; -9.094 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.816      ;
+; -9.084 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.901      ;
+; -9.071 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.888      ;
+; -9.055 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.870      ;
+; -9.021 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.836      ;
+; -9.018 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.832      ;
+; -9.012 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.817      ;
+; -8.994 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.808      ;
+; -8.988 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.793      ;
+; -8.981 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.795      ;
+; -8.975 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.780      ;
+; -8.970 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.787      ;
+; -8.960 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.777      ;
+; -8.955 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.772      ;
+; -8.937 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.754      ;
+; -8.902 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.167     ; 9.624      ;
+; -8.901 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.706      ;
+; -8.880 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.694      ;
+; -8.879 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.672      ;
+; -8.874 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.667      ;
+; -8.870 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.684      ;
+; -8.865 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.681      ;
+; -8.865 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.679      ;
+; -8.863 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.668      ;
+; -8.847 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.661      ;
+; -8.845 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.661      ;
+; -8.844 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.649      ;
+; -8.842 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.635      ;
+; -8.841 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.657      ;
+; -8.829 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 9.644      ;
+; -8.828 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.644      ;
+; -8.823 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.616      ;
+; -8.821 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.637      ;
+; -8.813 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.606      ;
+; -8.808 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.624      ;
+; -8.765 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.570      ;
+; -8.760 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.553      ;
+; -8.760 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.565      ;
+; -8.742 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.547      ;
+; -8.738 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.512      ;
+; -8.733 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.507      ;
+; -8.728 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.553      ;
+; -8.728 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.533      ;
+; -8.727 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.543      ;
+; -8.726 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.094     ; 9.519      ;
+; -8.723 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.548      ;
+; -8.722 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 9.539      ;
+; -8.717 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.533      ;
+; -8.712 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.528      ;
+; -8.709 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.514      ;
+; -8.701 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.112     ; 9.478      ;
+; -8.701 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.475      ;
+; -8.699 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.504      ;
+; -8.694 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.510      ;
+; -8.692 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.508      ;
+; -8.692 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.508      ;
+; -8.691 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.516      ;
+; -8.682 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.456      ;
+; -8.677 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.112     ; 9.454      ;
+; -8.672 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.497      ;
+; -8.672 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.446      ;
+; -8.664 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.112     ; 9.441      ;
+; -8.662 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.487      ;
+; -8.654 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.459      ;
+; -8.646 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.451      ;
+; -8.635 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.071     ; 9.451      ;
+; -8.632 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 9.446      ;
+; -8.619 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 9.393      ;
+; -8.612 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.082     ; 9.417      ;
+; -8.609 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 9.434      ;
+; -8.600 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.148     ; 9.341      ;
+; -8.590 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.112     ; 9.367      ;
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -556,106 +556,106 @@ No paths to report.
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.583 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.825      ;
-; 0.588 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.830      ;
-; 0.588 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.830      ;
-; 0.588 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.830      ;
-; 0.590 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.832      ;
-; 0.591 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.833      ;
-; 0.593 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.835      ;
-; 0.599 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.841      ;
-; 0.601 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.843      ;
-; 0.601 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.843      ;
-; 0.602 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.844      ;
-; 0.602 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.844      ;
-; 0.603 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.845      ;
-; 0.603 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.845      ;
-; 0.603 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.845      ;
-; 0.604 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
-; 0.604 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
-; 0.604 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
-; 0.604 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.846      ;
-; 0.605 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.847      ;
-; 0.605 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.847      ;
-; 0.605 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
-; 0.606 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.848      ;
-; 0.606 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.848      ;
-; 0.606 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.848      ;
-; 0.608 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.850      ;
-; 0.613 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.856      ;
-; 0.618 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.861      ;
-; 0.623 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.866      ;
-; 0.623 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.866      ;
-; 0.643 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.886      ;
-; 0.746 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.988      ;
-; 0.766 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.008      ;
-; 0.798 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.041      ;
-; 0.870 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.112      ;
-; 0.874 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.116      ;
-; 0.876 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.118      ;
-; 0.877 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.119      ;
-; 0.881 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.123      ;
-; 0.887 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.129      ;
-; 0.887 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.129      ;
-; 0.887 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.129      ;
-; 0.889 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.131      ;
-; 0.890 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
-; 0.890 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
-; 0.890 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
-; 0.890 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
-; 0.890 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.132      ;
-; 0.891 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.133      ;
-; 0.891 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.133      ;
-; 0.891 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.133      ;
-; 0.892 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.134      ;
-; 0.892 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.134      ;
-; 0.892 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.134      ;
-; 0.893 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
-; 0.894 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.136      ;
-; 0.894 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.136      ;
-; 0.894 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.136      ;
-; 0.895 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.137      ;
-; 0.898 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 1.135      ;
-; 0.898 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.140      ;
-; 0.899 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.142      ;
-; 0.900 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.142      ;
-; 0.901 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.143      ;
-; 0.901 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.143      ;
-; 0.903 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.145      ;
-; 0.904 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.147      ;
-; 0.904 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.147      ;
-; 0.905 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.147      ;
-; 0.905 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.147      ;
-; 0.905 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.147      ;
-; 0.909 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 1.146      ;
-; 0.910 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.153      ;
-; 0.910 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.153      ;
-; 0.911 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.154      ;
-; 0.921 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.164      ;
-; 0.922 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.165      ;
-; 0.968 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.210      ;
-; 0.969 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.211      ;
-; 0.973 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.215      ;
-; 0.976 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.218      ;
-; 0.980 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.222      ;
-; 0.984 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.226      ;
-; 0.986 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.228      ;
-; 0.986 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.229      ;
-; 0.986 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.228      ;
-; 0.987 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.229      ;
-; 0.989 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.231      ;
-; 0.989 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.231      ;
-; 0.989 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.231      ;
-; 0.990 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.232      ;
-; 0.990 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.232      ;
-; 0.991 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.233      ;
-; 0.991 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.233      ;
-; 0.997 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.239      ;
-; 0.997 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.239      ;
-; 0.997 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.239      ;
-; 0.998 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.241      ;
-; 0.999 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 1.236      ;
-; 0.999 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.241      ;
+; 0.517 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.758      ;
+; 0.584 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.825      ;
+; 0.589 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.830      ;
+; 0.589 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.830      ;
+; 0.590 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.831      ;
+; 0.591 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.832      ;
+; 0.591 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.832      ;
+; 0.593 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.834      ;
+; 0.600 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.841      ;
+; 0.601 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.842      ;
+; 0.602 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.843      ;
+; 0.602 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.843      ;
+; 0.603 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.844      ;
+; 0.603 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.844      ;
+; 0.603 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.844      ;
+; 0.604 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.845      ;
+; 0.605 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.846      ;
+; 0.605 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.846      ;
+; 0.605 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.846      ;
+; 0.605 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.846      ;
+; 0.606 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.847      ;
+; 0.606 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.848      ;
+; 0.607 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.848      ;
+; 0.607 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.848      ;
+; 0.610 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.851      ;
+; 0.611 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.853      ;
+; 0.613 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.854      ;
+; 0.614 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.855      ;
+; 0.614 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.856      ;
+; 0.623 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.865      ;
+; 0.645 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.887      ;
+; 0.746 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.987      ;
+; 0.789 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.030      ;
+; 0.790 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.032      ;
+; 0.794 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.036      ;
+; 0.869 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.110      ;
+; 0.871 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.112      ;
+; 0.875 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.116      ;
+; 0.876 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.117      ;
+; 0.877 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.118      ;
+; 0.878 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.119      ;
+; 0.880 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.121      ;
+; 0.881 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.122      ;
+; 0.888 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.129      ;
+; 0.889 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.130      ;
+; 0.890 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.131      ;
+; 0.890 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.131      ;
+; 0.890 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.131      ;
+; 0.891 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.132      ;
+; 0.891 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.132      ;
+; 0.891 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.132      ;
+; 0.892 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.133      ;
+; 0.892 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.133      ;
+; 0.892 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.133      ;
+; 0.892 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.134      ;
+; 0.892 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.133      ;
+; 0.893 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.134      ;
+; 0.893 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.134      ;
+; 0.895 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.136      ;
+; 0.897 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.138      ;
+; 0.899 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.141      ;
+; 0.900 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.141      ;
+; 0.901 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.142      ;
+; 0.901 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.142      ;
+; 0.901 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.142      ;
+; 0.902 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.143      ;
+; 0.902 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.144      ;
+; 0.902 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.136      ;
+; 0.902 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.143      ;
+; 0.902 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.143      ;
+; 0.904 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.145      ;
+; 0.906 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.147      ;
+; 0.910 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.152      ;
+; 0.912 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.154      ;
+; 0.912 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.153      ;
+; 0.913 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.147      ;
+; 0.913 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.154      ;
+; 0.913 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.155      ;
+; 0.923 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.165      ;
+; 0.970 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.211      ;
+; 0.974 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.215      ;
+; 0.975 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.216      ;
+; 0.977 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.218      ;
+; 0.979 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.220      ;
+; 0.981 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.222      ;
+; 0.985 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.226      ;
+; 0.986 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.227      ;
+; 0.987 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.228      ;
+; 0.988 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.229      ;
+; 0.990 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.231      ;
+; 0.990 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.231      ;
+; 0.991 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.232      ;
+; 0.991 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.232      ;
+; 0.991 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.233      ;
+; 0.991 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.232      ;
+; 0.992 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.233      ;
+; 0.996 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.237      ;
+; 0.996 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.230      ;
+; 0.998 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.239      ;
+; 1.000 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.241      ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +670,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -4.813 ; -1311.641      ;
+; CLOCK_50 ; -5.031 ; -1317.906      ;
 +----------+--------+----------------+
 
 
@@ -679,7 +679,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.290 ; 0.000          ;
+; CLOCK_50 ; 0.253 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; CLOCK_50 ; -3.000 ; -454.371                     ;
+; CLOCK_50 ; -3.000 ; -452.521                     ;
 +----------+--------+------------------------------+
 
 
@@ -709,106 +709,106 @@ No paths to report.
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                           ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
-; -4.813 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.689      ;
-; -4.813 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.690      ;
-; -4.697 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.573      ;
-; -4.697 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.574      ;
-; -4.696 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.578      ;
-; -4.683 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.559      ;
-; -4.676 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.552      ;
-; -4.666 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.543      ;
-; -4.666 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.542      ;
-; -4.640 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.516      ;
-; -4.640 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.517      ;
-; -4.607 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.506      ;
-; -4.597 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.474      ;
-; -4.594 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.471      ;
-; -4.586 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.468      ;
-; -4.580 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.462      ;
-; -4.561 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.437      ;
-; -4.549 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.419      ;
-; -4.543 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.363      ;
-; -4.539 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.445      ;
-; -4.531 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.063     ; 5.407      ;
-; -4.528 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.425      ;
-; -4.517 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.402      ;
-; -4.506 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.383      ;
-; -4.491 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.390      ;
-; -4.490 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.372      ;
-; -4.480 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.324      ;
-; -4.474 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.370      ;
-; -4.471 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.353      ;
-; -4.469 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.062     ; 5.346      ;
-; -4.461 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 5.334      ;
-; -4.460 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.035     ; 5.364      ;
-; -4.460 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.359      ;
-; -4.439 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.321      ;
-; -4.439 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.309      ;
-; -4.434 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 5.337      ;
-; -4.434 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.330      ;
-; -4.434 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.333      ;
-; -4.433 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.303      ;
-; -4.433 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.253      ;
-; -4.429 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.335      ;
-; -4.427 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.247      ;
-; -4.426 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.308      ;
-; -4.423 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.329      ;
-; -4.418 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.315      ;
-; -4.416 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.297      ;
-; -4.412 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.309      ;
-; -4.401 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.286      ;
-; -4.396 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.282      ;
-; -4.391 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.290      ;
-; -4.388 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.287      ;
-; -4.387 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.272      ;
-; -4.380 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.265      ;
-; -4.372 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 5.275      ;
-; -4.370 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.251      ;
-; -4.370 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.255      ;
-; -4.364 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.208      ;
-; -4.364 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.260      ;
-; -4.358 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.202      ;
-; -4.358 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.254      ;
-; -4.351 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 5.224      ;
-; -4.350 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.104     ; 5.186      ;
-; -4.350 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.035     ; 5.254      ;
-; -4.349 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.235      ;
-; -4.345 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.244      ;
-; -4.345 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 5.218      ;
-; -4.344 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.229      ;
-; -4.344 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.035     ; 5.248      ;
-; -4.343 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.089     ; 5.194      ;
-; -4.343 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.213      ;
-; -4.337 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.157      ;
-; -4.335 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 5.233      ;
-; -4.333 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.177      ;
-; -4.333 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.239      ;
-; -4.327 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.171      ;
-; -4.325 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.057     ; 5.207      ;
-; -4.324 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.194      ;
-; -4.324 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 5.227      ;
-; -4.322 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.219      ;
-; -4.318 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.138      ;
-; -4.318 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 5.221      ;
-; -4.318 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.214      ;
-; -4.314 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY2|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.104     ; 5.150      ;
-; -4.314 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.220      ;
-; -4.307 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 5.205      ;
-; -4.307 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY2|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.096     ; 5.151      ;
-; -4.306 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.187      ;
-; -4.303 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.200      ;
-; -4.300 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.040     ; 5.199      ;
-; -4.300 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.181      ;
-; -4.299 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.196      ;
-; -4.298 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 5.118      ;
-; -4.292 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.162      ;
-; -4.289 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.067     ; 5.162      ;
-; -4.287 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.043     ; 5.183      ;
-; -4.286 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.172      ;
-; -4.283 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.042     ; 5.180      ;
-; -4.282 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.188      ;
-; -4.280 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.166      ;
-; -4.279 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 5.149      ;
+; -5.031 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.917      ;
+; -4.998 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.884      ;
+; -4.987 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.873      ;
+; -4.979 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.865      ;
+; -4.923 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.809      ;
+; -4.903 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.789      ;
+; -4.866 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.752      ;
+; -4.839 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.724      ;
+; -4.820 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.705      ;
+; -4.803 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.688      ;
+; -4.794 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.053     ; 5.680      ;
+; -4.749 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.634      ;
+; -4.734 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.619      ;
+; -4.696 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.525      ;
+; -4.687 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.572      ;
+; -4.677 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.506      ;
+; -4.667 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.552      ;
+; -4.660 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.489      ;
+; -4.641 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.547      ;
+; -4.622 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.528      ;
+; -4.612 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.441      ;
+; -4.611 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.440      ;
+; -4.606 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.435      ;
+; -4.605 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.511      ;
+; -4.602 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.054     ; 5.487      ;
+; -4.576 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.481      ;
+; -4.569 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.477      ;
+; -4.561 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.390      ;
+; -4.557 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.463      ;
+; -4.556 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.462      ;
+; -4.551 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.457      ;
+; -4.543 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.448      ;
+; -4.536 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.444      ;
+; -4.532 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.437      ;
+; -4.528 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.419      ;
+; -4.527 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 5.356      ;
+; -4.525 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.433      ;
+; -4.524 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.429      ;
+; -4.517 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.425      ;
+; -4.509 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.400      ;
+; -4.506 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.412      ;
+; -4.492 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.383      ;
+; -4.486 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.380      ;
+; -4.472 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.033     ; 5.378      ;
+; -4.468 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.373      ;
+; -4.467 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.361      ;
+; -4.461 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.369      ;
+; -4.450 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.344      ;
+; -4.448 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.353      ;
+; -4.444 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.338      ;
+; -4.444 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.335      ;
+; -4.443 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.334      ;
+; -4.441 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.349      ;
+; -4.440 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.347      ;
+; -4.438 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.329      ;
+; -4.433 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.327      ;
+; -4.427 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.317      ;
+; -4.421 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.300      ;
+; -4.411 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.316      ;
+; -4.408 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.298      ;
+; -4.407 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.314      ;
+; -4.404 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.312      ;
+; -4.402 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.281      ;
+; -4.397 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.309      ;
+; -4.396 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.303      ;
+; -4.393 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.284      ;
+; -4.391 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.281      ;
+; -4.388 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.295      ;
+; -4.385 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.264      ;
+; -4.378 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.290      ;
+; -4.369 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.276      ;
+; -4.361 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.273      ;
+; -4.359 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.048     ; 5.250      ;
+; -4.349 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.243      ;
+; -4.343 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.233      ;
+; -4.342 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.232      ;
+; -4.339 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.034     ; 5.244      ;
+; -4.337 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.227      ;
+; -4.337 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.216      ;
+; -4.336 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.243      ;
+; -4.336 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.215      ;
+; -4.334 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 5.228      ;
+; -4.332 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.031     ; 5.240      ;
+; -4.332 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.239      ;
+; -4.331 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.210      ;
+; -4.331 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.238      ;
+; -4.325 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.232      ;
+; -4.317 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.224      ;
+; -4.313 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.225      ;
+; -4.312 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.219      ;
+; -4.312 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.224      ;
+; -4.307 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.189      ;
+; -4.307 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY3|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.027     ; 5.219      ;
+; -4.299 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.181      ;
+; -4.292 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.049     ; 5.182      ;
+; -4.291 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; display7Seg:DISPLAY4|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.044     ; 5.186      ;
+; -4.286 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.061     ; 5.165      ;
+; -4.280 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; display7Seg:DISPLAY0|saida7seg[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.162      ;
+; -4.275 ; cpu:CPU|PC:PC|toout[7]              ; display7Seg:DISPLAY5|saida7seg[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 5.182      ;
+; -4.274 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; display7Seg:DISPLAY1|saida7seg[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 5.156      ;
 +--------+-------------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -817,106 +817,106 @@ No paths to report.
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.290 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.414      ;
-; 0.294 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.418      ;
-; 0.294 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.418      ;
-; 0.294 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.418      ;
-; 0.294 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.419      ;
-; 0.295 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.420      ;
-; 0.296 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.420      ;
-; 0.300 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.424      ;
-; 0.300 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.301 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
-; 0.302 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
-; 0.302 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
-; 0.302 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
-; 0.302 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
-; 0.302 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
-; 0.303 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
-; 0.303 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.429      ;
-; 0.304 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.428      ;
-; 0.304 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.428      ;
-; 0.305 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.429      ;
-; 0.308 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.434      ;
-; 0.311 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.437      ;
-; 0.313 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.439      ;
-; 0.314 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.440      ;
-; 0.324 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.450      ;
-; 0.362 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.486      ;
-; 0.370 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.494      ;
-; 0.390 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.516      ;
-; 0.439 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.563      ;
-; 0.443 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.567      ;
-; 0.443 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.567      ;
-; 0.449 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
-; 0.450 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
-; 0.450 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
-; 0.450 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
-; 0.451 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.576      ;
-; 0.451 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.576      ;
-; 0.451 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.575      ;
-; 0.451 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.575      ;
-; 0.452 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.576      ;
-; 0.453 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.577      ;
-; 0.454 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.578      ;
-; 0.455 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.579      ;
-; 0.457 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.583      ;
-; 0.457 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.581      ;
-; 0.458 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.582      ;
-; 0.459 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
-; 0.459 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
-; 0.459 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
-; 0.459 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
-; 0.460 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
-; 0.460 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.586      ;
-; 0.461 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.586      ;
-; 0.461 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.587      ;
-; 0.461 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.585      ;
-; 0.462 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.588      ;
-; 0.462 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
-; 0.462 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
-; 0.462 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
-; 0.462 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
-; 0.463 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.587      ;
-; 0.463 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.588      ;
-; 0.464 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.589      ;
-; 0.464 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.590      ;
-; 0.466 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.586      ;
-; 0.466 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.590      ;
-; 0.469 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.589      ;
-; 0.471 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.597      ;
-; 0.471 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.596      ;
-; 0.472 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.598      ;
-; 0.474 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.600      ;
-; 0.475 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.601      ;
-; 0.487 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.613      ;
-; 0.502 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.626      ;
-; 0.505 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.629      ;
-; 0.506 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.630      ;
-; 0.506 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.630      ;
-; 0.509 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.633      ;
-; 0.509 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.633      ;
-; 0.512 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.637      ;
-; 0.513 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.638      ;
-; 0.513 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.638      ;
-; 0.513 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.638      ;
-; 0.514 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.638      ;
-; 0.514 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.639      ;
-; 0.514 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.638      ;
-; 0.515 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.640      ;
-; 0.516 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.641      ;
-; 0.516 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.641      ;
-; 0.516 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.641      ;
-; 0.517 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.641      ;
-; 0.517 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.641      ;
-; 0.517 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.642      ;
-; 0.517 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.641      ;
+; 0.253 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|tick           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.377      ;
+; 0.291 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.414      ;
+; 0.294 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.418      ;
+; 0.295 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.418      ;
+; 0.295 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.418      ;
+; 0.296 ; baseTempo:BASE_TEMPO|contador[26]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.420      ;
+; 0.296 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.419      ;
+; 0.297 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.420      ;
+; 0.300 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.423      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.425      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.425      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.302 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.426      ;
+; 0.303 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.426      ;
+; 0.303 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.426      ;
+; 0.303 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.427      ;
+; 0.303 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.427      ;
+; 0.303 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
+; 0.304 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.428      ;
+; 0.305 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.430      ;
+; 0.306 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.429      ;
+; 0.307 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.430      ;
+; 0.308 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.431      ;
+; 0.308 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.432      ;
+; 0.309 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.434      ;
+; 0.313 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.438      ;
+; 0.326 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.451      ;
+; 0.362 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.486      ;
+; 0.377 ; baseTempo:BASE_TEMPO|contador[13]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.501      ;
+; 0.389 ; cpu:CPU|PC:PC|toout[7]              ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.514      ;
+; 0.391 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.516      ;
+; 0.440 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.563      ;
+; 0.443 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.567      ;
+; 0.444 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.567      ;
+; 0.445 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.568      ;
+; 0.449 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.572      ;
+; 0.451 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.575      ;
+; 0.451 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.575      ;
+; 0.451 ; baseTempo:BASE_TEMPO|contador[11]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.574      ;
+; 0.452 ; baseTempo:BASE_TEMPO|contador[25]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.576      ;
+; 0.452 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.575      ;
+; 0.452 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.576      ;
+; 0.452 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.577      ;
+; 0.452 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.575      ;
+; 0.453 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.576      ;
+; 0.455 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.578      ;
+; 0.456 ; baseTempo:BASE_TEMPO|contador[7]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.579      ;
+; 0.456 ; baseTempo:BASE_TEMPO|contador[2]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.579      ;
+; 0.458 ; baseTempo:BASE_TEMPO|contador[4]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.581      ;
+; 0.460 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.584      ;
+; 0.460 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.583      ;
+; 0.460 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[17]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.584      ;
+; 0.460 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.584      ;
+; 0.460 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[15]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.584      ;
+; 0.461 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[9]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.584      ;
+; 0.462 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.586      ;
+; 0.462 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
+; 0.463 ; baseTempo:BASE_TEMPO|contador[14]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.587      ;
+; 0.463 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.588      ;
+; 0.463 ; baseTempo:BASE_TEMPO|contador[18]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.587      ;
+; 0.463 ; baseTempo:BASE_TEMPO|contador[16]   ; baseTempo:BASE_TEMPO|contador[18]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.587      ;
+; 0.463 ; baseTempo:BASE_TEMPO|contador[10]   ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.586      ;
+; 0.463 ; baseTempo:BASE_TEMPO|contador[24]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.587      ;
+; 0.464 ; baseTempo:BASE_TEMPO|contador[8]    ; baseTempo:BASE_TEMPO|contador[10]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.587      ;
+; 0.465 ; baseTempo:BASE_TEMPO|contador[22]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.589      ;
+; 0.466 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.590      ;
+; 0.466 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.589      ;
+; 0.467 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.592      ;
+; 0.469 ; baseTempo:BASE_TEMPO|contador[20]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.593      ;
+; 0.469 ; baseTempo:BASE_TEMPO|contador[6]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.592      ;
+; 0.470 ; cpu:CPU|PC:PC|toout[4]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.595      ;
+; 0.471 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[13]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 0.587      ;
+; 0.473 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.598      ;
+; 0.474 ; baseTempo:BASE_TEMPO|contador[12]   ; baseTempo:BASE_TEMPO|contador[14]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 0.590      ;
+; 0.476 ; cpu:CPU|PC:PC|toout[0]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[2]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.601      ;
+; 0.493 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[1]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.618      ;
+; 0.503 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.626      ;
+; 0.506 ; baseTempo:BASE_TEMPO|contador[1]    ; baseTempo:BASE_TEMPO|contador[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.629      ;
+; 0.506 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[21]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.630      ;
+; 0.507 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.630      ;
+; 0.508 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.631      ;
+; 0.509 ; baseTempo:BASE_TEMPO|contador[19]   ; baseTempo:BASE_TEMPO|contador[22]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.633      ;
+; 0.510 ; baseTempo:BASE_TEMPO|contador[3]    ; baseTempo:BASE_TEMPO|contador[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.633      ;
+; 0.511 ; baseTempo:BASE_TEMPO|contador[15]   ; baseTempo:BASE_TEMPO|contador[16]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.635      ;
+; 0.511 ; baseTempo:BASE_TEMPO|contador[5]    ; baseTempo:BASE_TEMPO|contador[8]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.634      ;
+; 0.514 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[19]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.638      ;
+; 0.514 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[23]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.638      ;
+; 0.515 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[11]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.638      ;
+; 0.515 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[25]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.639      ;
+; 0.515 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[5]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.640      ;
+; 0.515 ; baseTempo:BASE_TEMPO|contador[0]    ; baseTempo:BASE_TEMPO|contador[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.638      ;
+; 0.517 ; baseTempo:BASE_TEMPO|contador[17]   ; baseTempo:BASE_TEMPO|contador[20]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.641      ;
+; 0.517 ; baseTempo:BASE_TEMPO|contador[21]   ; baseTempo:BASE_TEMPO|contador[24]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.641      ;
+; 0.518 ; baseTempo:BASE_TEMPO|contador[9]    ; baseTempo:BASE_TEMPO|contador[12]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.641      ;
+; 0.518 ; baseTempo:BASE_TEMPO|contador[23]   ; baseTempo:BASE_TEMPO|contador[26]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.040      ; 0.642      ;
+; 0.518 ; cpu:CPU|PC:PC|toout[3]~_Duplicate_1 ; cpu:CPU|PC:PC|toout[6]~_Duplicate_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.643      ;
 +-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +931,10 @@ No synchronizer chains to report.
 +------------------+-----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -10.439   ; 0.290 ; N/A      ; N/A     ; -3.000              ;
-;  CLOCK_50        ; -10.439   ; 0.290 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -2969.006 ; 0.0   ; 0.0      ; 0.0     ; -454.371            ;
-;  CLOCK_50        ; -2969.006 ; 0.000 ; N/A      ; N/A     ; -454.371            ;
+; Worst-case Slack ; -10.699   ; 0.253 ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK_50        ; -10.699   ; 0.253 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -2951.531 ; 0.0   ; 0.0      ; 0.0     ; -452.521            ;
+;  CLOCK_50        ; -2951.531 ; 0.000 ; N/A      ; N/A     ; -452.521            ;
 +------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -1321,7 +1321,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1198360  ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1567097  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1331,7 +1331,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1198360  ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1567097  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1517,7 +1517,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 08 11:11:02 2019
+    Info: Processing started: Tue Oct 08 13:23:30 2019
 Info: Command: quartus_sta projeto1 -c projeto1
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -1533,14 +1533,14 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.439
+Info (332146): Worst-case setup slack is -10.699
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.439           -2969.006 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.637
+    Info (332119):   -10.699           -2951.531 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.562
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.637               0.000 CLOCK_50 
+    Info (332119):     0.562               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1553,14 +1553,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.413
+Info (332146): Worst-case setup slack is -9.715
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.413           -2679.205 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.583
+    Info (332119):    -9.715           -2669.517 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.517
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.583               0.000 CLOCK_50 
+    Info (332119):     0.517               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1571,26 +1571,26 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.813
+Info (332146): Worst-case setup slack is -5.031
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.813           -1311.641 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.290
+    Info (332119):    -5.031           -1317.906 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.253
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.290               0.000 CLOCK_50 
+    Info (332119):     0.253               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -454.371 CLOCK_50 
+    Info (332119):    -3.000            -452.521 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Tue Oct 08 11:11:08 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Tue Oct 08 13:23:33 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

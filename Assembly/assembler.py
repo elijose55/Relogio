@@ -53,12 +53,16 @@ reg_address_dict = {
 	'REG_DM':     '01000',
 	'REG_UH':     '10000',
 	'REG_DH':     '10001',
-	'REG_CLEAR':  '01111'
+	'REG_CLEAR':  '01111',
+	'REG_SWITCH': '01010',
+	'REG_AM_DH':  '10011',
+	'REG_AM_UH':  '10101',
 }
 
 mem_address_dict = {
 	"IO_TEMPO":    '00000000',
 	'CLEAR_TEMPO': '00000001',
+	'IO_SWITCH':   '00001001',
 	'LCD_US':      '00000011',
 	'LCD_DS':      '00000100',
 	'LCD_UM':      '00000101',
