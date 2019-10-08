@@ -20,7 +20,7 @@ entity bancoRegistradores is
 --
         dadoEscritaA    : in std_logic_vector((larguraBarramentoDados-1) downto 0);
 --
-        escreveA        : in std_logic := '0';
+        escreveA        : in std_logic;
         saidaA          : out std_logic_vector((larguraBarramentoDados -1) downto 0)
     );
 end entity;

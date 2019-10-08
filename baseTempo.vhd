@@ -23,7 +23,7 @@ architecture arch_baseTempo of baseTempo is
 	 signal divisor : natural := 50000000;
 begin
     -- chaves selecionam o divisor
-	 --divisor <= divisor_normal when sel="00" else
+	 --divisor <= 50000000 when sel="00" else
 		--			25000000 when sel ="01" else
 		--			10000000 when sel ="10" else
 		--			69444 when sel = "11"; -- passar 24 horas em 2 minutos
@@ -47,7 +47,7 @@ begin
 		  end if;
 		  end process;
 		
-			saida_clk <= ("0000000" & tick); -- saida_clk = 00000001 quando passa um segundo no relogio
+			saida_clk <= ("0000000" & tick) when enable = '1' else "00000000"; -- saida_clk = 00000001 quando passa um segundo no relogio
 	
 		
 end architecture;

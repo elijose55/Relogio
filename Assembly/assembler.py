@@ -46,7 +46,7 @@ instruction_dict = {
 }
 
 reg_address_dict = {
-	"REG_TEMPO":  '00000',
+	"REG_TEMPO":  '00011',
 	'REG_US':     '00001',
 	'REG_DS':     '00010',
 	'REG_UM':     '00100',
