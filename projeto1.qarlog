@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/elijo/Desktop/DesComp/relogio/Relogio/projeto1.qarlog
+
+Archive:	C:/Users/elijo/Desktop/DesComp/relogio/Relogio/projeto1.qar
+Date:		Tue Oct 08 15:57:38 2019
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MUXBancoReg.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/MuxPC.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/PC.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ROM.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/UC.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/ULA.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/Waveform.vwf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/Waveform1.vwf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/bancoRegistradores.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/baseTempo.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/cpu.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/decoder.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/display7Seg.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/output_files/Waveform.vwf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/projeto1.qpf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/projeto1.qsf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/registerFlag.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/relogio.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/simulation/qsim/output_files/Waveform1.vwf
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/somadorConstante.vhd
+C:/Users/elijo/Desktop/DesComp/relogio/Relogio/switches.vhd
+e:/apps/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

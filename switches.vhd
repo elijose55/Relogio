@@ -16,7 +16,6 @@ entity switches is
     port
     (
         SW   : IN STD_LOGIC_VECTOR(quantidadeChaves-1 downto 0);
-		  enable : IN STD_LOGIC;
         saida           : OUT STD_LOGIC_VECTOR(1 downto 0);
 		  saida_CPU : OUT STD_LOGIC
 		 
@@ -32,6 +31,6 @@ architecture swArch of switches is
 begin
 	-- Passa a entrada para a saida
 	saida <= SW(1) & SW(0);  -- saida de um vetor de 2 bits (dois primeiros switches)
-	saida_CPU <= SW(17) when enable ='1'; -- ativa AM/PM
+	saida_CPU <= SW(17);
 	
 end swArch;

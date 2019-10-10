@@ -7,7 +7,6 @@ def get_jump_labels(file):
 		line_number +=1
 		for word in words:
 			if(word[0] == "$"):
-				print("OK")
 				line = line.replace(word, '{0:08b}'.format(int(word[1:])))
 
 
@@ -16,7 +15,9 @@ def get_jump_labels(file):
 			label = words[0][:-1]
 			label_list.append((label, '{0:08b}'.format(line_number)))
 		else:
-			lines.append(line[:-1])
+
+			lines.append(line[:].replace('\n',''))
+			print("PO: ", line[:-1])
 
 	return label_list, lines
 
@@ -32,7 +33,9 @@ def set_instruction_opcode(data):
 		data = data.replace(key, mem_address_dict[key])
 
 	for i in label_list:
+		#print("i: ", i)
 		data = data.replace(i[0], "00000 " + str(i[1]))
+		#print("data: ", data)
 	return data
 
 instruction_dict = {
@@ -57,6 +60,9 @@ reg_address_dict = {
 	'REG_SWITCH': '01010',
 	'REG_AM_DH':  '10011',
 	'REG_AM_UH':  '10101',
+	'REG_SIGLA':  '11110',
+	'REG_TRACO':  '11010',
+	'REG_ZERA':   '11011'
 }
 
 mem_address_dict = {

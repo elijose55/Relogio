@@ -26,10 +26,10 @@ architecture arch_baseTempo of baseTempo is
 	 signal divisor : natural := 50000000;
 begin
     -- chaves selecionam o divisor
-	 divisor <= 50000000 when sel="00" else -- periodo normal
-					25000000 when sel ="01" else -- duas vezes mais rapido
-					10000000 when sel ="10" else -- quase 4 vezes mais rapido
-					69444 when sel = "11"; -- passar 24 horas em 2 minutos
+	 divisor <= 25000000 when sel="00" else -- periodo normal
+					10000000 when sel ="01" else -- 25 * mais rapido
+					34228 when sel ="10" else -- passar 24 horas em 2 minutos
+					10000 when sel = "11" else  25000000; -- ajuste de hora
     process(clk)
     begin
         if rising_edge(clk) then

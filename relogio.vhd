@@ -47,6 +47,7 @@ architecture estrutural of relogio is
 	signal tick, switchesTOcpu : std_logic;
     signal contador : integer range 0 to 50000001 := 0;
 	signal divisor : natural := 2000000;
+	--signal zera_visor : std_logic_vector(3 downto 0) := '1101';
 	
 begin
 	-- Instanciação da CPU
@@ -99,37 +100,21 @@ begin
 	);
 
 	-- Instanciação de cada Display
-	DISPLAY0 : entity work.display7Seg 
-	port map
-	(
-		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_US,
-		saida7seg	=> HEX0
-	);
-
-	DISPLAY1 : entity work.display7Seg 
-	port map
-	(
-		clk			=> CLOCK_50,
-		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_DS,
-		saida7seg	=> HEX1
-	);
 	DISPLAY2 : entity work.display7Seg 
 	port map
 	(
 		clk			=> CLOCK_50,
 		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_UM,
+		habilita	=> LCD_US,
 		saida7seg	=> HEX2
 	);
+
 	DISPLAY3 : entity work.display7Seg 
 	port map
 	(
 		clk			=> CLOCK_50,
 		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_DM,
+		habilita	=> LCD_DS,
 		saida7seg	=> HEX3
 	);
 	DISPLAY4 : entity work.display7Seg 
@@ -137,7 +122,7 @@ begin
 	(
 		clk			=> CLOCK_50,
 		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_UH,
+		habilita	=> LCD_UM,
 		saida7seg	=> HEX4
 	);
 	DISPLAY5 : entity work.display7Seg 
@@ -145,10 +130,41 @@ begin
 	(
 		clk			=> CLOCK_50,
 		dadoHex		=> barramentoDadosSaida(3 downto 0),
-		habilita	=> LCD_DH,
+		habilita	=> LCD_DM,
 		saida7seg	=> HEX5
 	);
-
+	DISPLAY6 : entity work.display7Seg 
+	port map
+	(
+		clk			=> CLOCK_50,
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
+		habilita	=> LCD_UH,
+		saida7seg	=> HEX6
+	);
+	DISPLAY7 : entity work.display7Seg 
+	port map
+	(
+		clk			=> CLOCK_50,
+		dadoHex		=> barramentoDadosSaida(3 downto 0),
+		habilita	=> LCD_DH,
+		saida7seg	=> HEX7
+	);
+	DISPLAY1 : entity work.display7Seg 
+	port map
+	(
+		clk			=> CLOCK_50,
+		dadoHex		=> "1101",
+		habilita	=> '1',
+		saida7seg	=> HEX1
+	);
+	DISPLAY0 : entity work.display7Seg 
+	port map
+	(
+		clk			=> CLOCK_50,
+		dadoHex		=> "1101",
+		habilita	=> '1',
+		saida7seg	=> HEX0
+	);
 
 	-- Instanciação das Chaves
 	CHAVES : entity work.switches 
@@ -159,13 +175,12 @@ begin
 	(
 		SW => SW,
 		saida	=> switches,
-		saida_CPU => switchesTOcpu,
-		enable => enable_switch
+		saida_CPU => switchesTOcpu
 	);
 	barramentoDadosEntrada <= saidaDivisorGenerico when habilita_BT = '1' else ("0000000" & switchesTOcpu) when enable_switch ='1' else "00000000";
 	
 LEDR(0) <= switches(0); -- acende se o primeiro switch estiver ativo
 LEDR(1) <= switches(1); -- acende se o segundo switch estiver ativo
-
+LEDR(17) <= switchesTOcpu; -- acende se o segundo switch estiver ativo
 
 end architecture;

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Oct 08 13:28:43 2019
+Analysis & Synthesis Status : Successful - Tue Oct 08 15:54:45 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : projeto1
 Top-level Entity Name : relogio
 Family : Cyclone IV E
-Total logic elements : 735
-    Total combinational functions : 452
+Total logic elements : 757
+    Total combinational functions : 474
     Dedicated logic registers : 335
 Total registers : 335
 Total pins : 101

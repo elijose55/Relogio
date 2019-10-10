@@ -59,6 +59,6 @@ begin
 		LCD_DM <= '1' when (endereco = DM AND writeEnable = '1') else '0';
 		LCD_UH <= '1' when (endereco = UH AND writeEnable = '1') else '0';
 		LCD_DH <= '1' when (endereco = DH AND writeEnable = '1') else '0';
-		ENABLE_SWITCH <= '1' when (endereco = SWITCH AND writeEnable = '1') else '0';
+		ENABLE_SWITCH <= '1' when (endereco = SWITCH AND readEnable = '1') else '0';
 			
 end architecture;
