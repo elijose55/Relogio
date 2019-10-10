@@ -1,3 +1,10 @@
+'''
+Assembler do codigo assembly do relogio
+Eli Jose e Pedro Azambuja
+Design de Computadores - Eng Computacao - Insper
+'''
+
+#Funcao para detecar labels de jump e armazenar sua linha em uma lista label_list, alem de retirar do codigo a label
 def get_jump_labels(file):
 	label_list = []
 	line_number = 0
@@ -22,6 +29,11 @@ def get_jump_labels(file):
 	return label_list, lines
 
 
+
+'''
+Funcao para substituir as instrucoes pelos seus respectivos opcode, para substituir os nomes de registradores pelos seus respectivos enderecoes no banco de registradores
+e substituir nomes de IOs pelos seus respectivos enderecos no decoder, alem de atribuir as linhas corretas aos JUMP e JNE.
+'''
 def set_instruction_opcode(data):
 	for key in instruction_dict:
 		data = data.replace(key, instruction_dict[key])
@@ -38,6 +50,7 @@ def set_instruction_opcode(data):
 		#print("data: ", data)
 	return data
 
+#dicionario de instrucoes
 instruction_dict = {
 	"LOAD":  '000',
 	'CMP':   '001',
@@ -48,6 +61,7 @@ instruction_dict = {
 	'JUMP':  '111',
 }
 
+#dicionario de enderecos no banco de registradores
 reg_address_dict = {
 	"REG_TEMPO":  '00011',
 	'REG_US':     '00001',
@@ -65,6 +79,7 @@ reg_address_dict = {
 	'REG_ZERA':   '11011'
 }
 
+#dicionario de enderecos no decoder
 mem_address_dict = {
 	"IO_TEMPO":    '00000000',
 	'CLEAR_TEMPO': '00000001',
@@ -77,9 +92,11 @@ mem_address_dict = {
 	'LCD_DH':      '00001000'
 }
 
+#abrindo o arquivo com o assembly a ser traduzido
 with open('assembly_relogio.asm', 'r') as infile:
 
 	label_list, lines = get_jump_labels(infile)
+	#adicionando o cabecalho necessario ao arquivo .mif para ser usado pela ROM
 	fin = open("../binario.mif", "wt")
 	fin.write("WIDTH=16;\n")
 	fin.write("DEPTH=256;\n")
