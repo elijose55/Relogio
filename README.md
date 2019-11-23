@@ -2,7 +2,7 @@
 A arquitetura foi projetada seguindo um modelo de processador genérico + periféricos.
 
 
-A descrição e guia completo do relógio está no [Relatorio.pdf](https://github.com/pedrooa/Relogio/blob/master/Relatorio.pdf).
+A descrição e guia completo do relógio estão no [Relatorio.pdf](https://github.com/pedrooa/Relogio/blob/master/Relatorio.pdf).
 
 
 O enunciado está em [Enunciado_projeto.pdf](https://github.com/pedrooa/Relogio/blob/master/Enunciado_projeto.pdf).
