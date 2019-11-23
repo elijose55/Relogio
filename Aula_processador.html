@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0170)https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <style>
+  /* fundo para o trecho de código */
+  div.sourceCode { overflow-x: auto; background-color: rgb(240,240,245);}  /*rgb(250,250,250)*/
+  
+  .bloco .title {
+      display: block;
+  }
+  
+  /*Bloco de solucao de exercicio*/
+  .bloco .label,
+  .bloco .separator {
+      font-weight: bold;
+  }
+  
+  .bloco .separator {
+      margin-right: .6em;
+  }
+  /* Solução */
+  div.solucao {
+    border-left: .3em solid #dd4444;   /*#dc3c01; */
+    margin-left: -.8em;
+    padding-left: .4em;
+    position: relative;
+    font-size: 90%;
+  }
+  
+  div.solucao .conteudo {
+    display: none;
+    padding-top: 1px;
+  }
+  
+  div.solucao button {
+    color: #0000AF;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  div.solucao button.viewed {
+    color: #FF2020;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  div.exemplo {
+    /*background-color: lightgray;*/
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  div.exemplo .sourceCode  {
+    /*background-color: lightgray;*/
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  /* Alinhamento dos títulos e parágrafos */
+  
+  body{margin-left: 5%; margin-right: 5%;
+           color: black; background: white;}
+  
+  hr{
+      margin-left: -4%;
+      background-color: rgb(0,150,150);  /*anterior:    240,240,240 */
+  }
+  h1{
+      margin-left: -4%;
+      background-color: rgb(210,210,220);
+  }
+  
+  h2{
+      margin-left: -4%;
+      background-color: rgb(220,220,230);
+  }
+  
+  h3{
+      margin-left: -4%;
+      background-color: rgb(230,230,240);
+  }
+  
+  h4{
+      margin-left: -4%;
+      background-color: rgb(240,240,250);
+  }
+  h5{
+      margin-left: -4%;
+      background-color: rgb(245,245,250);
+  }
+  /* Cores */
+  i{color: red}
+  em{color: green}
+  cite{color: brown}
+  /* blockquote > p { */
+  blockquote{color: red}
+  blockquote p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2em;
+  }
+  
+  /* ---- Front Matter ----
+  Pandoc header DIV. Contains .title, .author and .date. Comes before div#TOC.
+  Only appears if one of those three are in the document.   */
+  
+  div#header, header
+      {
+      /* Put border on bottom. Separates it from TOC or body that comes after it. */
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 0.5em;
+      }
+  
+  .title /* Pandoc title header (h1.title) */
+      {
+      text-align: center;
+      }
+  
+  .author, .date /* Pandoc author(s) and date headers (h2.author and h3.date) */
+      {
+      text-align: center;
+      }
+  
+  /* Pandoc table of contents DIV when using the --toc option.
+     NOTE: this doesn't support Pandoc's --id-prefix option for #TOC and #header.
+     Probably would need to use div[id$='TOC'] and div[id$='header'] as selectors.
+  */
+  
+  div#TOC, nav#TOC
+      {
+      /* Put border on bottom to separate it from body. */
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 0.5em;
+      }
+  
+  @media print
+      {
+      div#TOC, nav#TOC
+          {
+          /* Don't display TOC in print */
+          display: none;
+          }
+      }
+  /* ---- Images ---- */
+  img {
+      /* Let it be inline left/right where it wants to be, but verticality make
+         it in the middle to look nicer, but opinions differ, and if in a multi-line
+         paragraph, it might not be so great.
+         vertical-align: middle;
+      */
+      vertical-align: middle;
+      }
+  div.figure /* Pandoc figure-style image */
+      {
+      /* Center the image and caption */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-style: italic;
+      }
+  p.caption /* Pandoc figure-style caption within div.figure */
+      {
+      /* Inherits div.figure props by default */
+      }
+  /* ---- Tables ---- */
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-spacing: 0;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+  }
+  table th {
+      padding: 3px 10px;
+      background-color: white;
+      border-top: 1px;
+      border-left: 1px;
+      border-right: 1px;
+      border-bottom: 1px solid black;
+  }
+  table td {
+      padding: 3px 10px;
+      border-top: 1px;
+      border-left: 1px;
+      border-bottom: 1px;
+      border-right: 1px;
+  }
+  /* fundo para as linhas das tabelas */
+  tr.even{
+    background-color: rgb(250,250,255);
+  }
+  tr.odd{
+    background-color: rgb(250,250,250);
+  }
+  </style>
+  <script type="text/javascript">
+      function exibe(e)
+      {
+          var div = e.parentNode.firstElementChild;
+          var nome = e.parentNode.id;
+          var tipo=nome.substring(0, 3).toUpperCase()
+          switch (tipo) {
+            case "SOL":
+                nome = "Solução";
+                break;
+            case "COD":
+                nome = "Código";
+                break;
+            case "DIC":
+                nome = "Dica";
+                break;
+            case "DIA":
+                nome = "Diagrama";
+                break;
+            default:
+                nome = "";
+            }
+  
+          if (div.style.display == "" || div.style.display == "none") {
+              div.style.display = "block";
+              e.setAttribute("class", "viewed");
+              e.innerHTML = "Esconder ";
+          } else {
+              div.style.display = "none";
+              e.innerHTML = "Ver "+nome;
+          }
+      }
+      function validaBinario(nome) {
+          var valor, tamanho, i;
+          document.getElementById(nome).style.color = "black";
+          valor = document.getElementById(nome).value;
+          tamanho=valor.length;
+          for (i=0;i<tamanho; i=i+1){
+              if ( valor[i] != 1 && valor[i] != 0 ){
+                  document.getElementById(nome).style.color = "red";
+              }
+          }
+      }
+  </script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#aula-6-projetando-o-rel%C3%B3gio-processador">Aula 6: Projetando o Relógio (processador)</a><ul>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#objetivos">Objetivos</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#vis%C3%A3o-geral">Visão Geral</a><ul>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#busca-da-instru%C3%A7%C3%A3o">Busca da Instrução</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#implementa%C3%A7%C3%A3o-do-circuito">Implementação do Circuito</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#decodifica%C3%A7%C3%A3o-da-instru%C3%A7%C3%A3o">Decodificação da Instrução</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#execu%C3%A7%C3%A3o-da-opera%C3%A7%C3%A3o">Execução da Operação</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#escrita-do-resultado">Escrita do Resultado</a></li>
+<li><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#interligando-todos-m%C3%B3dulos">Interligando todos Módulos</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<p><a name="inicio"></a></p>
+<h1 id="aula-6-projetando-o-relógio-processador">Aula 6: Projetando o Relógio (processador)</h1>
+<h2 id="objetivos">Objetivos</h2>
+<ol style="list-style-type: decimal">
+<li>Esboçar o projeto do fluxo de dados do processador para o relógio.</li>
+</ol>
+<h2 id="visão-geral">Visão Geral</h2>
+<p>Vimos que um processador executa as instruções através de cinco passos:</p>
+<ul>
+<li><p>Busca da instrução;</p></li>
+<li><p>Decodificação da instrução;</p></li>
+<li><p>Leitura dos operandos;</p></li>
+<li><p>Execução da operação;</p></li>
+<li><p>Escrita do resultado.</p></li>
+</ul>
+<div class="figure">
+<img src="./Aula_processador_files/processador_DiagramaBloco-1.svg" alt="Etapas de Execução" style="width:40.0%">
+<p class="caption"><strong>Etapas de Execução</strong></p>
+</div>
+<p><br></p>
+<h3 id="busca-da-instrução">Busca da Instrução</h3>
+<p>Esta etapa é a mesma para todas as instruções executadas.</p>
+<p>O processador deverá definir o endereço da instrução a ser lida da memória de instruções:</p>
+<ul>
+<li><p>Incrementando o contador de programa (PC) para a próxima posição da memória:</p>
+<ul>
+<li>Quando o programa está executando uma sequência de instruções.</li>
+</ul></li>
+<li><p>Alterando o conteúdo do contador de programa como consequência de uma instrução de desvio:</p>
+<ul>
+<li>Que foi executada no ciclo anterior.</li>
+</ul></li>
+</ul>
+<p>Atualizado o PC, ele será usado para endereçar a memória de instruções e o conteúdo dessa posição de memória deverá ser guardado para uso das próximas etapas.</p>
+<p>O resultado da análise do funcionamento dessa etapa permite concluir que:</p>
+<ol style="list-style-type: decimal">
+<li>Temos duas possibilidades para a atualização do contador de programa, ou seja, o comportamento é similar ao uso de um comando "IF" de uma linguagem de programação.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm">    se  (desvio)
+
+        PC = Novo Valor do PC (calculado pela instrução anterior)
+
+    senão
+
+        PC = PC + Constante
+
+    fim se</code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>O conteúdo do PC deve endereçar a memória de instruções, que chamaremos de MEM.</p></li>
+<li><p>O conteúdo endereçado deve ser armazenado dentro do processador (normalmente em um registrador chamado registrador de instrução (RI)).</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm">    RI = MEM[PC]</code></pre></div>
+<h3 id="implementação-do-circuito">Implementação do Circuito</h3>
+<p>Lembrando da divisão entre Unidade de Controle e Fluxo de Dados, notamos que o FD recebe sinais de controle provenientes da UC. Chamaremos cada sinal de ponto de controle.</p>
+<div class="figure">
+<img src="./Aula_processador_files/unidadeControle-FluxoDados-pcfs-v2.svg" alt="Unidade de Controle e Fluxo de Dados" style="width:25.0%">
+<p class="caption"><strong>Unidade de Controle e Fluxo de Dados</strong></p>
+</div>
+<p><br></p>
+<p>Pelas conclusões anteriores, teremos que usar os seguintes componentes:</p>
+<ul>
+<li><p>Um registrador para o PC;</p></li>
+<li><p>Um multiplexador para executar a seleção do valor para o PC:</p>
+<ul>
+<li><p>Um ponto de controle para fazer a seleção desse Mux;</p></li>
+<li><p>Duas entradas, uma proveniente do PC incrementado e a outra do cálculo do endereço de desvio.</p></li>
+</ul></li>
+<li><p>Um somador para obter o PC com o incremento para a próxima instrução;</p></li>
+<li><p>A memória de instruções.</p></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">PC</th>
+<th align="center">MUX</th>
+<th align="center">SOMADOR</th>
+<th align="center">ROM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><img src="./Aula_processador_files/programCounter.svg" style="width:50.0%"></td>
+<td align="center"><img src="./Aula_processador_files/Multiplexer_2-to-1.svg" style="width:50.0%"></td>
+<td align="center"><img src="./Aula_processador_files/somandorConstante.svg" style="width:50.0%"></td>
+<td align="center"><img src="./Aula_processador_files/memoriaROM(Instrucoes).svg" style="width:50.0%"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Esboço da Etapa de Busca</strong></p>
+<p>Faça a conexão dos componentes para obter a etapa de busca da instrução.</p>
+<div id="sol-Exerc1" class="bloco solucao">
+<div class="conteudo" style="display: block;">
+<p style="color:red">
+Solução:
+</p>
+<p><br></p>
+<div class="figure">
+<img src="./Aula_processador_files/etapaBuscaInstrucao.svg" alt="Etapa de Busca da Instrução" style="width:30.0%">
+<p class="caption"><strong>Etapa de Busca da Instrução</strong></p>
+</div>
+</div>
+<button onclick="exibe(this)" class="viewed">Esconder </button>
+</div>
+<p><br></p>
+<hr>
+<h3 id="decodificação-da-instrução">Decodificação da Instrução</h3>
+<p>Como a etapa anterior, esta etapa tem o mesmo funcionamento independentemente da instrução sendo executada.</p>
+<p>Esta etapa é basicamente a interpretação dos campos da instrução.</p>
+<div class="figure">
+<img src="./Aula_processador_files/registradorInstrucao.svg" alt="Campos da Instrução" style="width:30.0%">
+<p class="caption"><strong>Campos da Instrução</strong></p>
+</div>
+<p><br></p>
+<p>A instrução que está na saída da memória de instruções deverá "alimentar" o endereçamento e a unidade de controle:</p>
+<ul>
+<li><p>A UC recebe o campo de bits referentes ao <em>opcode</em> da instrução sendo executada:</p>
+<ul>
+<li><p>E ativa todos pontos de controle para que a instrução funcione;</p></li>
+<li><p>O que pode ser descrito como: UC ← RI[opcode].</p></li>
+</ul></li>
+<li><p>O endereçamento recebe o(s) campo(s) de bits referente aos endereços utilizados:</p>
+<ul>
+<li><p>Essa ligação depende da arquitetura escolhida, principalmente a quantidade de operandos (argumentos);</p></li>
+<li><p>Pode ser decrito como:</p>
+<ul>
+<li><p>BancoRegAdd ← RI[Reg X bits];</p></li>
+<li><p>MEMAddr ← RI[MemBits];</p></li>
+</ul></li>
+</ul></li>
+<li><p>Os dados referentes ao endereçamento executado devem alimentar a próxima etapa;</p>
+<ul>
+<li><p>Considerando que temos dois argumentos, um vindo de um registrador e o outro da memória, podemos decrever como:</p>
+<ul>
+<li><p>ARG_1 ← REG[RI[Reg X bits]];</p></li>
+<li><p>ARG_2 ← MEM[RI[MemBits]];</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><br></p>
+<p>De acordo com a arquitetura escolhida, utilizaremos:</p>
+<ul>
+<li><p>Um registrador;</p></li>
+<li><p>Um banco de registradores;</p></li>
+<li><p>A memória RAM do sistema.</p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Registrador</th>
+<th align="center">Banco de Registradores</th>
+<th align="center">RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><img src="./Aula_processador_files/registradorGenerico_EnablePCFS.svg" style="width:60.0%"></td>
+<td align="center"><img src="./Aula_processador_files/arquivoRegistradores-1.svg" style="width:80.0%"></td>
+<td align="center"><img src="./Aula_processador_files/MemoriaRAM(dados).svg" style="width:40.0%"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Como estamos trabalhando com um processador que executa uma instrução por ciclo de <em>clock</em>, podemos omitir o registrador de instrução e considerar a sua função como sendo executada pela memória de instruções.</p>
+<p><br></p>
+<p>Faça o esboço do circuito para a arquitetura <em>registrador-memória</em> considerando as definições abaixo:</p>
+<ul>
+<li><p>Processador com 32 instruções, 8 registradores e endereçamento de 2048 posições de memória;</p></li>
+<li><p>Palavra de dados de 8 bits.</p></li>
+</ul>
+<p><br></p>
+<div class="figure">
+<img src="./Aula_processador_files/arquitetura_RegistradorMemoria.svg" alt="Arquitetura Registrador-Memória" style="width:20.0%">
+<p class="caption"><strong>Arquitetura Registrador-Memória</strong></p>
+</div>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">opcode</th>
+<th align="center">Registrador</th>
+<th align="center">Endereço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">X bits</td>
+<td align="center">Y bits</td>
+<td align="center">Z bits</td>
+</tr>
+<tr class="even">
+<td align="center">MSB (X+Y+Z-1)</td>
+<td align="center"></td>
+<td align="center">LSB (b0)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div id="sol-Exerc2" class="bloco solucao">
+<div class="conteudo" style="display: block;">
+<p style="color:red">
+Solução:
+</p>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">opcode</th>
+<th align="center">Registrador</th>
+<th align="center">Endereço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5 bits</td>
+<td align="center">3 bits</td>
+<td align="center">11 bits</td>
+</tr>
+<tr class="even">
+<td align="center">MSB (b18)</td>
+<td align="center"></td>
+<td align="center">LSB (b0)</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<div class="figure">
+<img src="./Aula_processador_files/etapaDecodificaInstrucao-REG_MEM.svg" alt="Etapa de Decodificação da Instrução" style="width:40.0%">
+<p class="caption"><strong>Etapa de Decodificação da Instrução</strong></p>
+</div>
+</div>
+<button onclick="exibe(this)" class="viewed">Esconder </button>
+</div>
+<p><br></p>
+<hr>
+<h3 id="execução-da-operação">Execução da Operação</h3>
+<p>Esta etapa depende da instrução sendo executada e da arquitetura escolhida.</p>
+<p>Faremos a implementação da instrução de soma com a arquitetura utilizada no exemplo anterior (<em>registrador-memória</em>).</p>
+<div id="sol-Exerc3" class="bloco solucao">
+<div class="conteudo" style="display: block;">
+<p style="color:red">
+Solução:
+</p>
+<p><br></p>
+<div class="figure">
+<img src="./Aula_processador_files/etapaExecucaoInstrucao-REG_MEM.svg" style="width:30.0%">
+
+</div>
+<p><br></p>
+</div>
+<button onclick="exibe(this)" class="viewed">Esconder </button>
+</div>
+<p><br></p>
+<hr>
+<h3 id="escrita-do-resultado">Escrita do Resultado</h3>
+<p>Esta etapa depende da instrução sendo executada.</p>
+<p>Como ela ficaria para o exemplo que estamos usando (<em>registrador-memória</em>)?</p>
+<hr>
+<h3 id="interligando-todos-módulos">Interligando todos Módulos</h3>
+<p>Agora que já possui todas as etapas, faça um esboço do circuito completo, interligando essas etapas e acertando possíveis incoerências.</p>
+<hr>
+<p><strong>Referências:</strong></p>
+<p><a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/linksUteis.html">Página com links</a> de referências sobre VHDL, Quartus, etc ...</p>
+<p><a name="fimDocumento"></a> <a href="https://insper.blackboard.com/bbcswebdav/pid-624292-dt-content-rid-4008390_2/courses/201962.GRENGCOM_201561_0004.DESIGNCOMP_6ENGCOMPA/Atividades/Aula-06_V_cpuRelogio.html#inicio">Ir para o início do documento</a>.</p>
+<hr>
+<p><br></p>
+<hr>
+<hr>
+<!-- FIM -->
+<!---
+######### (inicio dos links) ##########
+#######################################
+########### Links Internos ############
+--->
+
+
+</body></html>
