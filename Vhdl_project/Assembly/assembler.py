@@ -4,7 +4,6 @@ Eli Jose e Pedro Azambuja
 Design de Computadores - Eng Computacao - Insper
 '''
 
-
 #Funcao para detecar labels de jump e armazenar sua linha em uma lista label_list, alem de retirar do codigo a label
 def get_jump_labels(file):
 	label_list = []
@@ -25,8 +24,10 @@ def get_jump_labels(file):
 		else:
 
 			lines.append(line[:].replace('\n',''))
+			print("PO: ", line[:-1])
 
 	return label_list, lines
+
 
 
 '''
@@ -44,7 +45,9 @@ def set_instruction_opcode(data):
 		data = data.replace(key, mem_address_dict[key])
 
 	for i in label_list:
+		#print("i: ", i)
 		data = data.replace(i[0], "00000 " + str(i[1]))
+		#print("data: ", data)
 	return data
 
 #dicionario de instrucoes
@@ -94,7 +97,7 @@ with open('assembly_relogio.asm', 'r') as infile:
 
 	label_list, lines = get_jump_labels(infile)
 	#adicionando o cabecalho necessario ao arquivo .mif para ser usado pela ROM
-	fin = open("binario.mif", "wt")
+	fin = open("../binario.mif", "wt")
 	fin.write("WIDTH=16;\n")
 	fin.write("DEPTH=256;\n")
 	fin.write("ADDRESS_RADIX=DEC;\n")
@@ -104,12 +107,12 @@ with open('assembly_relogio.asm', 'r') as infile:
 	
 	for index, line in enumerate(lines):
 		line = set_instruction_opcode(line)
+		print(line)
 		line = line.replace(" ", "")
 		fin.write(str(index) + "	:	" + line + ";\n")
 
 	fin.write("END;")
 	fin.close()
 
-	#print(label_list)
-	print("ASSEMBLY EXECUTADO COM SUCESSO!")
+	print(label_list)
 
